@@ -63,6 +63,7 @@
 							<!-- END: GUEST -->
 
 							<!-- BEGIN: USER -->
+							{HEADER_TOPLINE}
 							<li><a href="{PHP.usr.name|cot_url('users', 'm=details&u='$this)}">{PHP.usr.name}</a></li>
 							<li><a href="{PHP|cot_url('users', 'm=profile')}">{PHP.L.Profile}</a></li>
 							<!-- IF {PHP.cot_modules.payments} AND {PHP.cfg.payments.balance_enabled} -->
