@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head>
-<title>{HEADER_TITLE}</title> 
+<title>{HEADER_TITLE}</title>
 <!-- IF {HEADER_META_DESCRIPTION} --><meta name="description" content="{HEADER_META_DESCRIPTION}" /><!-- ENDIF -->
 <!-- IF {HEADER_META_KEYWORDS} --><meta name="keywords" content="{HEADER_META_KEYWORDS}" /><!-- ENDIF -->
 <meta http-equiv="content-type" content="{HEADER_META_CONTENTTYPE}; charset=UTF-8" />
@@ -49,9 +49,9 @@
 			<div class="modal-footer">
 			<button class="btn" data-dismiss="modal" aria-hidden="true">{PHP.L.Close}</button>
 		</div>
-	</div>	
+	</div>
 	<!-- ENDIF -->
-	
+
 	<div id="wrapper" class="container">
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-inner">
@@ -61,7 +61,7 @@
 							<li><a href="{PHP|cot_url('login')}" data-toggle="modal" onClick="$('#AuthModal').modal(); return false;">{PHP.L.Login}</a></li>
 							<li><a href="{PHP|cot_url('users','m=register')}">{PHP.L.Register}</a></li>
 							<!-- END: GUEST -->
-							
+
 							<!-- BEGIN: USER -->
 							<li><a href="{PHP.usr.name|cot_url('users', 'm=details&u='$this)}">{PHP.usr.name}</a></li>
 							<li><a href="{PHP|cot_url('users', 'm=profile')}">{PHP.L.Profile}</a></li>
@@ -78,7 +78,7 @@
 									<!-- ENDIF -->
 									<!-- IF {PHP|cot_auth('projects', 'any', '1')} -->
 									<li><a href="{PHP|cot_url('projects', 'm=useroffers')}">{PHP.L.offers_useroffers}</a></li>
-									<!-- ENDIF --> 
+									<!-- ENDIF -->
 								</ul>
 							</li>
 							<!-- ENDIF -->
@@ -90,7 +90,7 @@
 									<!-- IF {PHP.cot_plugins_active.marketorders} -->
 									<li><a href="{PHP|cot_url('marketorders', 'm=sales')}">{PHP.L.marketorders_mysales}</a></li>
 									<li><a href="{PHP|cot_url('marketorders', 'm=purchases')}">{PHP.L.marketorders_mypurchases}</a></li>
-									<!-- ENDIF --> 
+									<!-- ENDIF -->
 								</ul>
 							</li>
 							<!-- ENDIF -->
@@ -119,13 +119,13 @@
 				</div>
 			</div>
 		</div>
-							
+
 		<div id="header" class="row">
 			<div class="span4">
 				<div class="logo"><a href="{PHP|cot_url('index')}" title="{PHP.cfg.maintitle} {PHP.cfg.separator} {PHP.cfg.subtitle}"><img src="themes/{PHP.theme}/img/logo.png"/></a></div>
 			</div>
 			<div class="span5">
-				
+
 			</div>
 			<div class="span3 textright paddingtop10">
 				<!-- BEGIN: I18N_LANG -->
@@ -151,7 +151,7 @@
 				</ul>
 			</div>
 		</div>
-		
+
 		<div id="main" class="content">
-		
+
 <!-- END: HEADER -->

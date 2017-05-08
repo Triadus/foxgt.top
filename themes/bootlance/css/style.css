@@ -4,7 +4,7 @@
 *	{ margin:0; padding:0; }
 html	{ padding:0; height:100%; }
 
-body	{ 
+body	{
 	height:100%;
 	background-color:#FFFFFF;
 }
@@ -235,7 +235,7 @@ ol					{ margin-left:20px; list-style-type:decimal; }
 
 #usergrouplist ul li:first-child a	{ color:#900; }
 
-/* 13. Login form 
+/* 13. Login form
 --------------------------------------------------- */
 
 .form-signin {
@@ -257,7 +257,7 @@ ol					{ margin-left:20px; list-style-type:decimal; }
 #listprojects .prjtop { background-color: #feefb3; }
 #listprojects .prjbold { background-color: #dff2bf; }
 
-/* Mavatars 
+/* Mavatars
 ---------------------------------------------------- */
 
 .upload-link {
