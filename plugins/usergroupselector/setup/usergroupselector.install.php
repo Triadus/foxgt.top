@@ -1,7 +1,7 @@
 <?php
 /**
  * plugin User Group Selector for Cotonti Siena
- * 
+ *
  * @package usergroupselector
  * @version 1.0.0
  * @author CMSWorks Team
@@ -34,8 +34,8 @@ if(cot_plugin_active('freelancers'))
 $group_exists = (bool)$db->query("SELECT grp_id FROM $db_groups WHERE grp_id=4")->fetch();
 if($group_exists)
 {
-	$rgroups['grp_name'] = 'Фрилансеры';
-	$rgroups['grp_title'] = 'Фрилансер';
+	$rgroups['grp_name'] = 'Авторы';
+	$rgroups['grp_title'] = 'Автор';
 	$rgroups['grp_alias'] = 'freelancer';
 
 	$db->update($db_groups, $rgroups, 'grp_id=4');
