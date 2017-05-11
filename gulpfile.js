@@ -11,29 +11,29 @@ var gulp           = require('gulp'),
 // Обновление страниц сайта на локальном сервере
 gulp.task('browser-sync', function() {
 	browserSync({
-		proxy: "fox-gt.com",
+		proxy: "foxgt.top",
 		notify: false
 	});
 });
 
 // Компиляция style.css
 gulp.task('sass', function() {
-	return gulp.src('themes/masters/css/style.sass')
+	return gulp.src('themes/foxgt/css/style.sass')
 		.pipe(sass({
 			includePaths: bourbon.includePaths
 		}).on('error', sass.logError))
 		.pipe(autoprefixer(['last 15 versions']))
 		.pipe(cleanCSS())
-		.pipe(gulp.dest('themes/masters/css/'))
+		.pipe(gulp.dest('themes/foxgt/css/'))
 		.pipe(browserSync.reload({stream: true}))
 });
 
 // Наблюдение за файлами
 gulp.task('watch', ['sass', 'browser-sync'], function() {
-	gulp.watch('themes/masters/css/style.sass', ['sass']);
-	gulp.watch('themes/masters/**/*.tpl', browserSync.reload);
-	gulp.watch('themes/masters/js/**/*.js', browserSync.reload);
-	gulp.watch('themes/masters/**/*', browserSync.reload);
+	gulp.watch('themes/foxgt/css/style.sass', ['sass']);
+	gulp.watch('themes/foxgt/**/*.tpl', browserSync.reload);
+	gulp.watch('themes/foxgt/js/**/*.js', browserSync.reload);
+	gulp.watch('themes/foxgt/**/*', browserSync.reload);
 	gulp.watch('plugins/**/*.php', browserSync.reload);
 	gulp.watch('plugins/**/*.tpl', browserSync.reload);
 	gulp.watch('themes/admin/**/*.tpl', browserSync.reload);
