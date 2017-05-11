@@ -16,6 +16,8 @@
 
 <body>
 
+<!--Всплывающее окно авторизации  -->
+
 	<!-- IF {PHP.usr.id} == 0 -->
 	<div id="AuthModal" class="modal hide fade">
 		<div class="modal-header">
@@ -53,12 +55,18 @@
 	<!-- ENDIF -->
 
 	<div id="wrapper" class="container">
+
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container">
-						<ul class="nav pull-right">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+						<ul class="nav pull-right nav-collapse collapse">
 							<!-- BEGIN: GUEST -->
-							<li><a href="{PHP|cot_url('login')}" data-toggle="modal" onClick="$('#AuthModal').modal(); return false;">{PHP.L.Login}</a></li>
+							<li><a href="{PHP|cot_url('login')}" data-toggle="modal" onclick="$('#AuthModal').modal(); return false;">{PHP.L.Login}</a></li>
 							<li><a href="{PHP|cot_url('users','m=register')}">{PHP.L.Register}</a></li>
 							<!-- END: GUEST -->
 

@@ -13,7 +13,7 @@
 				<!-- ENDIF -->
 				<tr>
 					<td class="width30">{PHP.L.Username}:</td>
-					<td class="width70">{USERS_REGISTER_USER} *</td>
+					<td class="width50">{USERS_REGISTER_USER} *</td>
 				</tr>
 				<tr>
 					<td>{USERS_REGISTER_FIRSTNAME_TITLE}</td>
