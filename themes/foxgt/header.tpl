@@ -60,7 +60,7 @@
 	<div class="support">
 		<div class="container">
 			<div class="row">
-					<div class="col-lg-11 col-md-8 col-sm-8 col-xs-12 phone">
+					<div class="col-lg-10 col-md-8 col-sm-8 col-xs-12 phone">
 						Поддержка:
 						<i class="fa fa-phone" aria-hidden="true"></i>
 							+38 048 770 7468 |
@@ -68,7 +68,7 @@
 							fox.gt.sales@gmail.com
 					</div>
 
-					<div class="col-lg-1 col-md-4 col-sm-4 hidden-xs translit">
+					<div class="col-lg-2 col-md-4 col-sm-4 hidden-xs translit">
 						<!-- BEGIN: I18N_LANG -->
 						<!-- BEGIN: I18N_LANG_ROW -->
 						<a href="{I18N_LANG_ROW_URL}" class="{I18N_LANG_ROW_CLASS}"><img src="images/flags/{I18N_LANG_ROW_FLAG}.png"/></a>
@@ -82,13 +82,12 @@
 <!-- ВНУТРЕННЕЕ МЕНЮ -->
 
 	<nav class="navbar-inverse">
-		<div class="container">
+		<div class="container-fluid">
 
 			<!-- BEGIN: USER -->
 
-			<div class="navbar-header">
+			<div class="navbar-header hidden-sm">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-								<span class="sr-only">Toggle navigation</span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
@@ -99,7 +98,7 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
 				<ul class="nav navbar-nav">
 
-					<li><a href="{PHP|cot_url('users', 'm=profile')}">{PHP.L.Profile}</a></li>
+
 
 					<!-- IF {PHP.cot_modules.payments} AND {PHP.cfg.payments.balance_enabled} -->
 					<li><a href="{HEADER_USER_BALANCE_URL}">{PHP.L.payments_mybalance}: {HEADER_USER_BALANCE|number_format($this, '2', '.', ' ')} {PHP.cfg.payments.valuta}</a></li>
@@ -162,56 +161,59 @@
 						</ul>
 					</li>
 					<!-- ENDIF -->
-
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="logout"><a href="{PHP|cot_url('users', 'm=profile')}">{PHP.L.Profile}</a></li>
 					<li class="logout">
 						{HEADER_USER_ADMINPANEL}
 					</li>
 					<li class="logout">
 						{HEADER_USER_LOGINOUT}
 					</li>
-
 				</ul>
 			</div>
-
 			<!-- END: USER -->
-
 		</div>
 	</nav>
 
 <!-- Секция HEADER -->
 
-		<div id="header" class="row">
-			<div class="span4">
-				<div class="logo"><a href="{PHP|cot_url('index')}" title="{PHP.cfg.maintitle} {PHP.cfg.separator} {PHP.cfg.subtitle}"><img src="themes/{PHP.theme}/img/logo.png"/></a></div>
+	<header>
+		<div class="container">
+			<div class="row">
+
+				<div class="col-lg-2">
+					<div class="logo"><a href="{PHP|cot_url('index')}" title="{PHP.cfg.maintitle} {PHP.cfg.separator} {PHP.cfg.subtitle}"><img src="themes/{PHP.theme}/img/logo.png"/></a></div>
+				</div>
+
+				<div class="col-lg-7">
+					<nav class="navbar navbar-default">
+						<ul class="nav navbar-nav">
+							<li class="nav-item"><a class="nav-link<!-- IF {PHP.env.ext} == 'index' --> active<!-- ENDIF -->" href="{PHP|cot_url('index')}">{PHP.L.Home}</a></li>
+							<li class="nav-item"><a class="nav-link<!-- IF {PHP.env.ext} == 'projects' --> active<!-- ENDIF -->" href="{PHP|cot_url('projects')}">{PHP.L.projects_projects}</a></li>
+							<li class="nav-item"><a class="nav-link<!-- IF {PHP.env.ext} == 'users' AND ({PHP.group} == {PHP.cot_groups.4.alias} OR {PHP.urr.user_maingrp} == 4) --> active<!-- ENDIF -->" href="{PHP.cot_groups.4.alias|cot_url('users', 'group='$this)}">{PHP.cot_groups.4.name}</a></li>
+							<li class="nav-item"><a class="nav-link<!-- IF {PHP.env.ext} == 'users' AND ({PHP.group} == {PHP.cot_groups.7.alias} OR {PHP.urr.user_maingrp} == 7) --> active<!-- ENDIF -->" href="{PHP.cot_groups.7.alias|cot_url('users', 'group='$this)}">{PHP.cot_groups.7.name}</a></li>
+							<!-- IF {PHP.cot_modules.market} -->
+							<li class="nav-item"><a class="nav-link<!-- IF {PHP.env.ext} == 'market' AND !{PHP.type} --> active<!-- ENDIF -->" href="{PHP|cot_url('market')}">{PHP.L.market}</a></li>
+							<!-- ENDIF -->
+							<!-- IF {PHP.cot_plugins_active.contact} -->
+							<li class="nav-item"><a class="nav-link<!-- IF {PHP.env.ext} == 'contact' --> active<!-- ENDIF -->" href="{PHP|cot_url('contact')}">{PHP.L.Contact}</a></li>
+							<!-- ENDIF -->
+						</ul>
+					</nav>
+				</div>
+
+				<div class="col-lg-3 col-md-8 col-sm-8 register">
+					<ul class="nav navbar-nav">
+						<!-- BEGIN: GUEST -->
+						<li class="nav-item"><a class="btn-warning button-glow" href="{PHP|cot_url('users','m=register')}">{PHP.L.Register}</a></li>
+						<li class="nav-item"><a class="btn-warning button-glow" href="{PHP|cot_url('login')}">{PHP.L.Login}</a></li>
+						<!-- END: GUEST -->
+					</ul>
+				</div>
 			</div>
-			<!-- BEGIN: GUEST -->
-			<li><a href="{PHP|cot_url('login')}" data-toggle="modal" onclick="$('#AuthModal').modal(); return false;">{PHP.L.Login}</a></li>
-			<li><a href="{PHP|cot_url('users','m=register')}">{PHP.L.Register}</a></li>
-			<!-- END: GUEST -->
-
-
-
 		</div>
-
-		<div class="navbar">
-			<div class="navbar-inner">
-				<ul class="nav">
-
-					<li<!-- IF {PHP.env.ext} == 'index' --> class="active"<!-- ENDIF -->>
-					<a href="{PHP|cot_url('index')}">{PHP.L.Home}</a>
-					</li>
-
-					<!-- IF {PHP.cot_modules.projects} -->
-					<li<!-- IF {PHP.env.ext} == 'projects' --> class="active"<!-- ENDIF -->><a href="{PHP|cot_url('projects')}">{PHP.L.projects_projects}</a></li>
-					<!-- ENDIF -->
-					<li<!-- IF {PHP.env.ext} == 'users' AND ({PHP.group} == {PHP.cot_groups.4.alias} AND {PHP.m} == 'main' --> class="active"<!-- ENDIF -->><a href="{PHP.cot_groups.4.alias|cot_url('users', 'group='$this)}">{PHP.cot_groups.4.name}</a></li>
-					<li<!-- IF {PHP.env.ext} == 'users' AND ({PHP.group} == {PHP.cot_groups.7.alias} AND {PHP.m} == 'main' --> class="active"<!-- ENDIF -->><a href="{PHP.cot_groups.7.alias|cot_url('users', 'group='$this)}">{PHP.cot_groups.7.name}</a></li>
-					<!-- IF {PHP.cot_modules.market} -->
-					<li<!-- IF {PHP.env.ext} == 'market' AND !{PHP.type} --> class="active"<!-- ENDIF -->><a href="{PHP|cot_url('market')}">{PHP.L.market}</a></li>
-					<!-- ENDIF -->
-				</ul>
-			</div>
-		</div>
+	</header>
 
 		<div class="content">
 

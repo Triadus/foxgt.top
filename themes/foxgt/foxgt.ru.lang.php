@@ -18,3 +18,4 @@ defined('COT_CODE') or die('Wrong URL.');
 $L['Username'] = 'Логин';
 $L['header_notice'] = 'Есть уведомления';
 $L['Firstname'] = 'Имя';
+$L['Contact'] = 'Поддержка';
