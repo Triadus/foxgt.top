@@ -9,7 +9,7 @@
  * Version=1.0.6
  * Date=
  * Author=CMSWorks Team
- * Copyright=Copyright (c) CMSWorks.ru
+ * Copyright=Copyright (c) Logo-Z
  * Notes=
  * Auth_guests=RW
  * Lock_guests=12345A

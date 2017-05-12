@@ -12,6 +12,9 @@
 {HEADER_HEAD}
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700|Exo+2|Roboto+Slab:400,700" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
 </head>
 
 <body>
@@ -19,7 +22,7 @@
 <!--Всплывающее окно авторизации  -->
 
 	<!-- IF {PHP.usr.id} == 0 -->
-	<div id="AuthModal" class="modal hide fade">
+	<div id="AuthModal" class="modal fade">
 		<div class="modal-header">
 			<h3 id="myModalLabel">{PHP.L.Login}</h3>
 			</div>
@@ -54,100 +57,150 @@
 	</div>
 	<!-- ENDIF -->
 
-	<div id="wrapper" class="container">
+	<div class="support">
+		<div class="container">
+			<div class="row">
+					<div class="col-lg-11 col-md-8 col-sm-8 col-xs-12 phone">
+						Поддержка:
+						<i class="fa fa-phone" aria-hidden="true"></i>
+							+38 048 770 7468 |
+						<i class="fa fa-envelope-o" aria-hidden="true"></i>
+							fox.gt.sales@gmail.com
+					</div>
 
-		<div class="navbar navbar-inverse navbar-fixed-top">
-			<div class="navbar-inner">
-				<div class="container">
-					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</a>
-						<ul class="nav pull-right nav-collapse collapse">
-							<!-- BEGIN: GUEST -->
-							<li><a href="{PHP|cot_url('login')}" data-toggle="modal" onclick="$('#AuthModal').modal(); return false;">{PHP.L.Login}</a></li>
-							<li><a href="{PHP|cot_url('users','m=register')}">{PHP.L.Register}</a></li>
-							<!-- END: GUEST -->
-
-							<!-- BEGIN: USER -->
-							<li><a href="{PHP.usr.name|cot_url('users', 'm=details&u='$this)}">{PHP.usr.name}</a></li>
-							<li><a href="{PHP|cot_url('users', 'm=profile')}">{PHP.L.Profile}</a></li>
-							<!-- IF {PHP.cot_modules.payments} AND {PHP.cfg.payments.balance_enabled} -->
-							<li><a href="{HEADER_USER_BALANCE_URL}">{PHP.L.payments_mybalance}: {HEADER_USER_BALANCE|number_format($this, '2', '.', ' ')} {PHP.cfg.payments.valuta}</a></li>
-							<!-- ENDIF -->
-							<!-- IF {PHP.cot_modules.projects} -->
-							<li class="dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#">{PHP.L.projects_projects}<b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									<li><a href="{PHP.usr.id|cot_url('users', 'm=details&id='$this'&tab=projects')}">{PHP.L.projects_myprojects}</a></li>
-									<!-- IF {PHP.cot_plugins_active.sbr} -->
-									<li><a href="{PHP|cot_url('sbr')}">{PHP.L.sbr_mydeals}</a></li>
-									<!-- ENDIF -->
-									<!-- IF {PHP|cot_auth('projects', 'any', '1')} -->
-									<li><a href="{PHP|cot_url('projects', 'm=useroffers')}">{PHP.L.offers_useroffers}</a></li>
-									<!-- ENDIF -->
-								</ul>
-							</li>
-							<!-- ENDIF -->
-							<!-- IF {PHP.cot_modules.market} -->
-							<li class="dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#">{PHP.L.market}<b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									<li><a href="{PHP.usr.id|cot_url('users', 'm=details&id='$this'&tab=market')}">{PHP.L.market_myproducts}</a></li>
-									<!-- IF {PHP.cot_plugins_active.marketorders} -->
-									<li><a href="{PHP|cot_url('marketorders', 'm=sales')}">{PHP.L.marketorders_mysales}</a></li>
-									<li><a href="{PHP|cot_url('marketorders', 'm=purchases')}">{PHP.L.marketorders_mypurchases}</a></li>
-									<!-- ENDIF -->
-								</ul>
-							</li>
-							<!-- ENDIF -->
-							<!-- IF {PHP.cot_plugins_active.paypro} -->
-							<li>
-								<!-- IF {HEADER_USER_PROEXPIRE} -->
-								<a href="{PHP|cot_url('plug', 'e=paypro')}" title="{PHP.L.paypro_header_extend}">{PHP.L.paypro_header_expire_short} {HEADER_USER_PROEXPIRE|cot_date('d.m.Y', $this)}</a>
-								<!-- ELSE -->
-								<a href="{PHP|cot_url('plug', 'e=paypro')}" title="{PHP.L.paypro_header_buy}">{PHP.L.paypro_header_buy}</a>
-								<!-- ENDIF -->
-							</li>
-							<!-- ENDIF -->
-							<!-- IF {HEADER_USER_PMREMINDER} --><li>{HEADER_USER_PMREMINDER}</li><!-- ENDIF -->
-							<!-- IF {HEADER_NOTICES} -->
-							<li class="dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#">{PHP.L.header_notice}<b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									{HEADER_NOTICES}
-								</ul>
-							</li>
-							<!-- ENDIF -->
-							<li>{HEADER_USER_ADMINPANEL}</li>
-							<li>{HEADER_USER_LOGINOUT}</li>
-							<!-- END: USER -->
-						</ul>
-				</div>
+					<div class="col-lg-1 col-md-4 col-sm-4 hidden-xs translit">
+						<!-- BEGIN: I18N_LANG -->
+						<!-- BEGIN: I18N_LANG_ROW -->
+						<a href="{I18N_LANG_ROW_URL}" class="{I18N_LANG_ROW_CLASS}"><img src="images/flags/{I18N_LANG_ROW_FLAG}.png"/></a>
+						<!-- END: I18N_LANG_ROW -->
+						<!-- END: I18N_LANG -->
+					</div>
 			</div>
 		</div>
+	</div>
+
+<!-- ВНУТРЕННЕЕ МЕНЮ -->
+
+	<nav class="navbar-inverse">
+		<div class="container">
+
+			<!-- BEGIN: USER -->
+
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+				<a class="navbar-brand" href="{PHP.usr.name|cot_url('users', 'm=details&u='$this)}">{PHP.usr.name}</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+				<ul class="nav navbar-nav">
+
+					<li><a href="{PHP|cot_url('users', 'm=profile')}">{PHP.L.Profile}</a></li>
+
+					<!-- IF {PHP.cot_modules.payments} AND {PHP.cfg.payments.balance_enabled} -->
+					<li><a href="{HEADER_USER_BALANCE_URL}">{PHP.L.payments_mybalance}: {HEADER_USER_BALANCE|number_format($this, '2', '.', ' ')} {PHP.cfg.payments.valuta}</a></li>
+					<!-- ENDIF -->
+
+					<!-- IF {PHP.cot_modules.projects} -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{PHP.L.projects_projects} <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+
+							<li><a href="{PHP.usr.id|cot_url('users', 'm=details&id='$this'&tab=projects')}">{PHP.L.projects_myprojects}</a></li>
+
+							<!-- IF {PHP.cot_plugins_active.sbr} -->
+							<li><a href="{PHP|cot_url('sbr')}">{PHP.L.sbr_mydeals}</a></li>
+							<!-- ENDIF -->
+
+							<!-- IF {PHP|cot_auth('projects', 'any', '1')} -->
+							<li><a href="{PHP|cot_url('projects', 'm=useroffers')}">{PHP.L.offers_useroffers}</a></li>
+							<!-- ENDIF -->
+
+						</ul>
+					</li>
+					<!-- ENDIF -->
+
+					<!-- IF {PHP.cot_modules.market} -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{PHP.L.market} <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+
+							<li><a href="{PHP.usr.id|cot_url('users', 'm=details&id='$this'&tab=market')}">{PHP.L.market_myproducts}</a></li>
+
+							<!-- IF {PHP.cot_plugins_active.marketorders} -->
+							<li><a href="{PHP|cot_url('marketorders', 'm=sales')}">{PHP.L.marketorders_mysales}</a></li>
+							<li><a href="{PHP|cot_url('marketorders', 'm=purchases')}">{PHP.L.marketorders_mypurchases}</a></li>
+							<!-- ENDIF -->
+
+						</ul>
+					</li>
+					<!-- ENDIF -->
+
+					<!-- IF {PHP.cot_plugins_active.paypro} -->
+					<li>
+						<!-- IF {HEADER_USER_PROEXPIRE} -->
+						<a href="{PHP|cot_url('plug', 'e=paypro')}" title="{PHP.L.paypro_header_extend}">{PHP.L.paypro_header_expire_short} {HEADER_USER_PROEXPIRE|cot_date('d.m.Y', $this)}</a>
+						<!-- ELSE -->
+						<a href="{PHP|cot_url('plug', 'e=paypro')}" title="{PHP.L.paypro_header_buy}">{PHP.L.paypro_header_buy}</a>
+						<!-- ENDIF -->
+					</li>
+					<!-- ENDIF -->
+
+					<!-- IF {HEADER_USER_PMREMINDER} -->
+					<li>{HEADER_USER_PMREMINDER}</li>
+					<!-- ENDIF -->
+
+					<!-- IF {HEADER_NOTICES} -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{PHP.L.header_notice} <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li>{HEADER_NOTICES}</li>
+						</ul>
+					</li>
+					<!-- ENDIF -->
+
+					<li class="logout">
+						{HEADER_USER_ADMINPANEL}
+					</li>
+					<li class="logout">
+						{HEADER_USER_LOGINOUT}
+					</li>
+
+				</ul>
+			</div>
+
+			<!-- END: USER -->
+
+		</div>
+	</nav>
+
+<!-- Секция HEADER -->
 
 		<div id="header" class="row">
 			<div class="span4">
 				<div class="logo"><a href="{PHP|cot_url('index')}" title="{PHP.cfg.maintitle} {PHP.cfg.separator} {PHP.cfg.subtitle}"><img src="themes/{PHP.theme}/img/logo.png"/></a></div>
 			</div>
-			<div class="span5">
+			<!-- BEGIN: GUEST -->
+			<li><a href="{PHP|cot_url('login')}" data-toggle="modal" onclick="$('#AuthModal').modal(); return false;">{PHP.L.Login}</a></li>
+			<li><a href="{PHP|cot_url('users','m=register')}">{PHP.L.Register}</a></li>
+			<!-- END: GUEST -->
 
-			</div>
-			<div class="span3 textright paddingtop10">
-				<!-- BEGIN: I18N_LANG -->
-					<!-- BEGIN: I18N_LANG_ROW -->
-					<a href="{I18N_LANG_ROW_URL}" class="{I18N_LANG_ROW_CLASS}"><img src="images/flags/{I18N_LANG_ROW_FLAG}.png"/></a> &nbsp;
-					<!-- END: I18N_LANG_ROW -->
-				<!-- END: I18N_LANG -->
-			</div>
+
+
 		</div>
 
 		<div class="navbar">
 			<div class="navbar-inner">
 				<ul class="nav">
-					<li<!-- IF {PHP.env.ext} == 'index' --> class="active"<!-- ENDIF -->><a href="{PHP|cot_url('index')}">{PHP.L.Home}</a></li>
+
+					<li<!-- IF {PHP.env.ext} == 'index' --> class="active"<!-- ENDIF -->>
+					<a href="{PHP|cot_url('index')}">{PHP.L.Home}</a>
+					</li>
+
 					<!-- IF {PHP.cot_modules.projects} -->
 					<li<!-- IF {PHP.env.ext} == 'projects' --> class="active"<!-- ENDIF -->><a href="{PHP|cot_url('projects')}">{PHP.L.projects_projects}</a></li>
 					<!-- ENDIF -->
@@ -160,6 +213,6 @@
 			</div>
 		</div>
 
-		<div id="main" class="content">
+		<div class="content">
 
 <!-- END: HEADER -->

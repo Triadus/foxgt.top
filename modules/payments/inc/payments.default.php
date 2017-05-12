@@ -6,7 +6,7 @@
  * @package payments
  * @version 1.1.2
  * @author CMSWorks Team
- * @copyright Copyright (c) CMSWorks.ru, littledev.ru
+ * @copyright Copyright (c) Logo-Z, littledev.ru
  * @license BSD
  */
 list($usr['auth_read'], $usr['auth_write'], $usr['isadmin']) = cot_auth('payments', 'any', 'RWA');

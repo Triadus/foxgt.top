@@ -9,7 +9,7 @@ Hooks=market.add.add.done,market.edit.update.done
  * Creates alias when adding or updating a market
  *
  * @package AutoAlias2lance
- * @copyright CrazyFreeMan (simple-website.in.ua), CMSworks.ru
+ * @copyright CrazyFreeMan (simple-website.in.ua), Logo-Z
  */
 
 defined('COT_CODE') or die('Wrong URL');

@@ -3,7 +3,7 @@
  * AutoAlias2lance functions
  *
  * @package Auto Alias 2 Freelance
- * @copyright (c) CrazyFreeMan, CMSworks.ru
+ * @copyright (c) CrazyFreeMan, Logo-Z
  */
 
 defined('COT_CODE') or die('Wrong URL');

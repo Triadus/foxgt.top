@@ -8,7 +8,7 @@
  * Version=1.3.1
  * Date=08-aug-2013
  * @author CMSWorks Team
- * @copyright Copyright (c) CMSWorks.ru, littledev.ru
+ * @copyright Copyright (c) Logo-Z, littledev.ru
  * Notes=
  * Auth_guests=R
  * Lock_guests=W12345A

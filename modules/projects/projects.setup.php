@@ -7,7 +7,7 @@
  * Version=2.6.0
  * Date=24.11.2012
  * Author=CMSWorks Team
- * Copyright=Copyright &copy; CMSWorks.ru, littledev.ru
+ * Copyright=Copyright &copy; Logo-Z, littledev.ru
  * Notes=
  * SQL=
  * Auth_guests=R
@@ -53,7 +53,7 @@
  * @package projects
  * @version 2.6.0
  * @author CMSWorks Team
- * @copyright Copyright (c) CMSWorks.ru, littledev.ru
+ * @copyright Copyright (c) Logo-Z, littledev.ru
  * @license BSD
  */
 

@@ -7,7 +7,7 @@
  * Version=2.1.0
  * Date=21.12.2010
  * Author=CMSWorks Team
- * Copyright=Copyright (c) CMSWorks.ru, littledev.ru
+ * Copyright=Copyright (c) Logo-Z, littledev.ru
  * Notes=
  * Auth_guests=R
  * Lock_guests=W12345A
@@ -33,7 +33,7 @@
  * @package userpoints
  * @version 2.1.0
  * @author CMSWorks Team
- * @copyright Copyright (c) CMSWorks.ru, littledev.ru
+ * @copyright Copyright (c) Logo-Z, littledev.ru
  * @license BSD
  */
 defined('COT_CODE') or die('Wrong URL');

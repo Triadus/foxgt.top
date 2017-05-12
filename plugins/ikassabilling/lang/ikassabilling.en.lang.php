@@ -5,7 +5,7 @@
  * @package ikassabilling
  * @version 2.0
  * @author CMSWorks Team
- * @copyright Copyright (c) CMSWorks.ru
+ * @copyright Copyright (c) Logo-Z
  * @license BSD
  */
 

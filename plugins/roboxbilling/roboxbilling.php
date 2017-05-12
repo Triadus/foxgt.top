@@ -11,7 +11,7 @@
  * @package roboxbilling
  * @version 1.0
  * @author CMSWorks Team
- * @copyright Copyright (c) CMSWorks.ru
+ * @copyright Copyright (c) Logo-Z
  * @license BSD
  */
 defined('COT_CODE') && defined('COT_PLUG') or die('Wrong URL');

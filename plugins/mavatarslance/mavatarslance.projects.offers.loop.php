@@ -10,7 +10,7 @@
  *
  * @version 1.2.1
  * @author CMSWorks Team
- * @copyright Copyright (c) CMSWorks.ru, littledev.ru
+ * @copyright Copyright (c) Logo-Z, littledev.ru
  */
 defined('COT_CODE') or die('Wrong URL');
 global $cfg;

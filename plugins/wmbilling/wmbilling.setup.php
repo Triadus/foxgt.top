@@ -9,7 +9,7 @@
  * Version=1.1.2
  * Date=
  * Author=CMSWorks Team
- * Copyright=Copyright (c) CMSWorks.ru
+ * Copyright=Copyright (c) Logo-Z
  * Notes=
  * Auth_guests=R
  * Lock_guests=12345A
@@ -34,7 +34,7 @@
  * @package wmbilling
  * @version 1.1.2
  * @author CMSWorks Team
- * @copyright Copyright (c) CMSWorks.ru
+ * @copyright Copyright (c) Logo-Z
  * @license BSD
  */
 ?>

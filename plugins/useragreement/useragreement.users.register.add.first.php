@@ -11,7 +11,7 @@
  * @package useragreement
  * @version 1.0
  * @author CMSWorks Team
- * @copyright Copyright (c) CMSWorks.ru, littledev.ru
+ * @copyright Copyright (c) Logo-Z, littledev.ru
  * @license BSD
  */
 

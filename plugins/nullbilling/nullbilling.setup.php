@@ -9,7 +9,7 @@
  * Version=1.0.1
  * Date=
  * Author=CMSWorks Team
- * Copyright=Copyright (c) CMSWorks.ru
+ * Copyright=Copyright (c) Logo-Z
  * Notes=
  * Auth_guests=RW
  * Lock_guests=12345A
@@ -29,7 +29,7 @@
  * @package nullbilling
  * @version 1.0.1
  * @author CMSWorks Team
- * @copyright Copyright (c) CMSWorks.ru
+ * @copyright Copyright (c) Logo-Z
  * @license BSD
  */
 ?>

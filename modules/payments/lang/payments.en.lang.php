@@ -5,7 +5,7 @@
  * @package payments
  * @version 1.1.2
  * @author CMSWorks Team
- * @copyright Copyright (c) CMSWorks.ru
+ * @copyright Copyright (c) Logo-Z
  * @license BSD
  */
 

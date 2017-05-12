@@ -11,7 +11,7 @@
  * @package usercategories
  * @version 2.5.4
  * @author CMSWorks Team
- * @copyright Copyright (c) CMSWorks.ru
+ * @copyright Copyright (c) Logo-Z
  * @license BSD
  */
 defined('COT_CODE') or die('Wrong URL');

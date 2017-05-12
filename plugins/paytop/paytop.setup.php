@@ -8,7 +8,7 @@
  * Version=1.1.0
  * Date=
  * Author=CMSWorks Team
- * Copyright=Copyright (c) CMSWorks.ru, littledev.ru
+ * Copyright=Copyright (c) Logo-Z, littledev.ru
  * Notes=
  * Auth_guests=R
  * Lock_guests=12345A
@@ -29,7 +29,7 @@
  * @package paytop
  * @version 1.1.0
  * @author CMSWorks Team
- * @copyright Copyright (c) CMSWorks.ru, littledev.ru
+ * @copyright Copyright (c) Logo-Z, littledev.ru
  * @license BSD
  */
 

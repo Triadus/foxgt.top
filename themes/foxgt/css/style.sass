@@ -1,13 +1,8 @@
 /* 0. Elements
-	*--------------------------------------------------
+@import "bourbon"
+@import "fonts.sass"
+@import "buttons.sass"
 
-*
-		margin: 0
-		padding: 0
-
-html
-		padding: 0
-		height: 100%
 
 body
 		height: 100%
@@ -50,55 +45,55 @@ textarea
 /* 1. Main Navigation
 	*--------------------------------------------------
 
-#nav
-		line-height: 1.4em
-		background: #ddd
-		overflow: auto
-		margin: 0
-		padding: 0
-		li
-				width: 159px
-				border-right: 1px solid #f8f8f8
-				float: left
-				a
-						text-shadow: 0 1px 0 #fff
-						padding: 10px 20px
-						display: block
-						&:hover
-								color: #fff
-								text-decoration: none
-								text-shadow: 0 -1px 0 #000
-								background: #667e72
-						span
-								color: #999
-								font-size: .9em
-								text-transform: lowercase
-								display: block
-						&:hover span
-								color: #ccc
+.navbar-main .navbar-nav > li > a
+	color: #000
+	font-size: 17px
+	padding-right: 15px
+	padding-top: 16px
+	font-family: "MyriadSetProText", sans-serif
+	&:hover
+		text-decoration: underline
+	&.active
+		color: orange
+
+.support
+	background-color: #333333
+	padding: 5px 0
+	.phone
+		color: orange
+		font-size: 14px
+		font-family: "Comfortaa", sans-serif
+		list-style-type: none
+		text-align: left
+		.fa
+			padding: 0 2px 0 5px
+			font-size: 16px
+			color: #fff
+	.translit
+		text-align: right
+
+.navbar-inverse
+	.navbar-nav > li > a
+		font-size: 14px
+		font-family: "Exo 2", sans-serif
+	.dropdown-menu
+		font-family: "Exo 2", sans-serif
+		font-size: 14px
+
+.navbar-inverse
+	li
+		text-align: center
+	.navbar-nav
+		.logout
+			border-left: 1px solid orange
+			text-transform: uppercase
+			a
+				font-size: 12px
 
 /* 2. Structure
 	*--------------------------------------------------
 
-#wrapper
-		min-height: 100%
-
-#main
-		padding-bottom: 100px
-
-#header
-		margin-top: 40px
-		height: 140px
-		.logo
-				padding: 50px 0 30px
-				font-size: 36px
-				font-weight: bold
-				a
-						color: #0065CC
-						text-decoration: none
-		.auth
-				margin: 0
-				text-align: right
+// Секция HEADER
 
 #footer
 		border-top: #DEDEE6 solid 1px
@@ -639,3 +634,8 @@ ol
 				opacity: 0
 				filter: alpha(opacity = 0)
 				font-size: 50px
+
+
+
+
+@import "_media"

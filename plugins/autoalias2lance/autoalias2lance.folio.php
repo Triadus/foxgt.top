@@ -9,7 +9,7 @@ Hooks=folio.add.add.done,folio.edit.update.done
  * Creates alias when adding or updating a folio
  *
  * @package AutoAlias2lance
- * @copyright CrazyFreeMan (simple-website.in.ua), CMSworks.ru
+ * @copyright CrazyFreeMan (simple-website.in.ua), Logo-Z
  */
 
 defined('COT_CODE') or die('Wrong URL');

@@ -9,7 +9,7 @@
  * Version=1.0.7
  * Date=
  * Author=CMSWorks Team
- * Copyright=Copyright (c) CMSWorks.ru
+ * Copyright=Copyright (c) Logo-Z
  * Notes=
  * Auth_guests=R
  * Lock_guests=12345A
@@ -37,7 +37,7 @@
  * @package sbr
  * @version 1.0.7
  * @author CMSWorks Team
- * @copyright Copyright (c) CMSWorks.ru
+ * @copyright Copyright (c) Logo-Z
  * @license BSD
  */
 ?>

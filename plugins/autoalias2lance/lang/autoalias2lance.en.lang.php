@@ -3,7 +3,7 @@
  * English language file
  *
  * @package AutoAlias2lance
- * @copyright (c) CrazyFreeMan, CMSworks.ru
+ * @copyright (c) CrazyFreeMan, Logo-Z
  */
 
 defined('COT_CODE') or die('Wrong URL');

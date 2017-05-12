@@ -7,7 +7,7 @@
  * Version=2.0.3
  * Date=
  * Author=CMSWorks Team
- * Copyright=Copyright (c) CMSWorks.ru
+ * Copyright=Copyright (c) Logo-Z
  * Notes=
  * SQL=
  * Auth_guests=R
@@ -38,7 +38,7 @@
  * @package payments
  * @version 2.0.3
  * @author CMSWorks Team
- * @copyright Copyright (c) CMSWorks.ru
+ * @copyright Copyright (c) Logo-Z
  * @license BSD
  */
 

@@ -7,7 +7,7 @@ Description=Отзывы о человеке
 Version=2.2.3
 Date=24.11.2012
 Author=CMSWorks Team
-Copyright=Copyright &copy; CMSWorks.ru, littledev.ru
+Copyright=Copyright &copy; Logo-Z, littledev.ru
 Notes=
 Auth_guests=R
 Lock_guests=W12345A
@@ -31,6 +31,6 @@ userall=01:radio::1:Show on user details page all reviews
  * @package reviews
  * @version 2.2.3
  * @author CMSWorks Team
- * @copyright Copyright (c) CMSWorks.ru, littledev.ru
+ * @copyright Copyright (c) Logo-Z, littledev.ru
  * @license BSD
  */
