@@ -177,6 +177,7 @@
 	</nav>
 
 <!-- Секция HEADER -->
+<!-- BEGIN: GUEST -->
 
 	<header>
 		<div class="container">
@@ -186,7 +187,7 @@
 					<div class="logo"><a href="{PHP|cot_url('index')}" title="{PHP.cfg.maintitle} {PHP.cfg.separator} {PHP.cfg.subtitle}"><img src="themes/{PHP.theme}/img/logo.png"/></a></div>
 				</div>
 
-				<div class="col-lg-7">
+				<div class="col-lg-7 menu-center">
 					<nav class="navbar navbar-default">
 						<ul class="nav navbar-nav">
 							<li class="nav-item"><a class="nav-link<!-- IF {PHP.env.ext} == 'index' --> active<!-- ENDIF -->" href="{PHP|cot_url('index')}">{PHP.L.Home}</a></li>
@@ -205,16 +206,39 @@
 
 				<div class="col-lg-3 col-md-8 col-sm-8 register">
 					<ul class="nav navbar-nav">
-						<!-- BEGIN: GUEST -->
 						<li class="nav-item"><a class="btn-warning button-glow" href="{PHP|cot_url('users','m=register')}">{PHP.L.Register}</a></li>
 						<li class="nav-item"><a class="btn-warning button-glow" href="{PHP|cot_url('login')}">{PHP.L.Login}</a></li>
-						<!-- END: GUEST -->
 					</ul>
 				</div>
 			</div>
 		</div>
-	</header>
 
-		<div class="content">
+		<section class="slider">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1>Биржа копирайтинга</h1>
+					</div>
+					<div class="row">
+						<div class="col-md-3">
+							<p>Копирайтинг</p>
+						</div>
+						<div class="col-md-3">
+							<p>Рерайтинг</p>
+						</div>
+						<div class="col-md-3">
+							<p>SEO копирайтинг</p>
+						</div>
+						<div class="col-md-3">
+							<p>Перевод</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</header>
+	<!-- END: GUEST -->
+
+	<div class="content">
 
 <!-- END: HEADER -->

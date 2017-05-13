@@ -1,12 +1,10 @@
 <!-- BEGIN: MAIN -->
 
-<div class="row">
-	<div class="span12">
+
+
 		<!-- IF {PHP.cot_plugins_active.paytop} -->
 		{PHP|cot_get_paytop ('top')}
 		<!-- ENDIF -->
-	</div>
-</div>
 <div class="row">
 	<div class="span3">
 		<div class="well well-small">{PROJECTS_CATALOG}</div>
