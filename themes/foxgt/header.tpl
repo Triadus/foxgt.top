@@ -23,36 +23,46 @@
 
 	<!-- IF {PHP.usr.id} == 0 -->
 	<div id="AuthModal" class="modal fade">
-		<div class="modal-header">
-			<h3 id="myModalLabel">{PHP.L.Login}</h3>
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h3 class="modal-title">{PHP.L.Authorization}</h3>
+				</div>
+				<div class="modal-body">
+					<form class="form-horizontal" action="{HEADER_GUEST_SEND}" method="post">
+						<fieldset>
+
+							<div class="form-group">
+								<label for="inputEmail" class="col-lg-3 control-label">{PHP.L.users_nameormail}</label>
+								<div class="col-lg-9">
+									<input class="form-control" name="rusername" id="inputEmail" placeholder="Login or Email" type="text">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="inputPassword" class="col-lg-3 control-label">{PHP.L.Password}</label>
+								<div class="col-lg-9">
+									<input class="form-control" id="inputPassword" name="rpassword" placeholder="Password" type="password">
+									<a rel="nofollow" class="link small" href="{PHP|cot_url('users','m=passrecover')}">{PHP.L.users_lostpass}</a>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox">{HEADER_GUEST_COOKIETTL} {PHP.L.users_rememberme}
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group author">
+								<div class="col-lg-9 col-lg-offset-3">
+									<button type="submit" class="btn btn-warning">{PHP.L.Login}</button>
+									<button type="button" class="btn btn-default" data-dismiss="modal">{PHP.L.Close}</button>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
 			</div>
-			<div class="modal-body">
-				<form class="form-horizontal" action="{HEADER_GUEST_SEND}" method="post">
-					<div class="control-group">
-						<label class="control-label" for="inputEmail">{PHP.L.users_nameormail}</label>
-						<div class="controls">
-							<input type="text" name="rusername" id="inputEmail" />
-						</div>
-					</div>
-					<div class="control-group">
-						<label class="control-label" for="inputPassword">{PHP.L.Password}</label>
-						<div class="controls">
-							<input type="password" name="rpassword" id="inputPassword" /><br/>
-							<a rel="nofollow" class="link small" href="{PHP|cot_url('users','m=passrecover')}">{PHP.L.users_lostpass}</a>
-						</div>
-					</div>
-					<div class="control-group">
-						<div class="controls">
-							<label class="checkbox">
-							{HEADER_GUEST_COOKIETTL} {PHP.L.users_rememberme}
-							</label><br/>
-							<button type="submit" class="btn btn-primary btn-large">{PHP.L.Login}</button>
-						</div>
-					</div>
-				</form>
-			</div>
-			<div class="modal-footer">
-			<button class="btn" data-dismiss="modal" aria-hidden="true">{PHP.L.Close}</button>
 		</div>
 	</div>
 	<!-- ENDIF -->
@@ -60,7 +70,7 @@
 	<div class="support">
 		<div class="container">
 			<div class="row">
-					<div class="col-lg-10 col-md-8 col-sm-8 col-xs-12 phone">
+					<div class="col-lg-11 col-md-8 col-sm-8 col-xs-12 phone">
 						Поддержка:
 						<i class="fa fa-phone" aria-hidden="true"></i>
 							+38 048 770 7468 |
@@ -68,7 +78,7 @@
 							fox.gt.sales@gmail.com
 					</div>
 
-					<div class="col-lg-2 col-md-4 col-sm-4 hidden-xs translit">
+					<div class="col-lg-1 col-md-4 col-sm-4 hidden-xs translit">
 						<!-- BEGIN: I18N_LANG -->
 						<!-- BEGIN: I18N_LANG_ROW -->
 						<a href="{I18N_LANG_ROW_URL}" class="{I18N_LANG_ROW_CLASS}"><img src="images/flags/{I18N_LANG_ROW_FLAG}.png"/></a>
@@ -207,7 +217,7 @@
 				<div class="col-lg-3 col-md-8 col-sm-8 register">
 					<ul class="nav navbar-nav">
 						<li class="nav-item"><a class="btn-warning button-glow" href="{PHP|cot_url('users','m=register')}">{PHP.L.Register}</a></li>
-						<li class="nav-item"><a class="btn-warning button-glow" href="{PHP|cot_url('login')}">{PHP.L.Login}</a></li>
+						<li class="nav-item"><a class="btn-warning button-glow" href="{PHP|cot_url('login')}" data-toggle="modal" onClick="$('#AuthModal').modal(); return false;">{PHP.L.Login}</a></li>
 					</ul>
 				</div>
 			</div>
