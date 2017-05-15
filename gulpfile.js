@@ -52,7 +52,7 @@ gulp.task('deploy', function() {
 	'themes/**',
 	];
 	return gulp.src(globs, {buffer: false})
-	.pipe(conn.dest('/fox-gt/public_html/themes/'));
+	.pipe(conn.dest('/foxgt/public_html/themes/'));
 });
 
 gulp.task('default', ['watch']);

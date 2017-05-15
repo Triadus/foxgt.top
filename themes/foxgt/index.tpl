@@ -58,39 +58,49 @@
 
 <!-- ПРОЕКТЫ -->
 
-<div class="projects">
-	<div class="container">
-		<h2 class="text-center">{PHP.L.projects_lastprojects}</h2>
-		<div class="row">
-			<div class="col-lg-12">
-				{PROJECTS}
+		<div class="projects">
+			<div class="container">
+				<h2 class="text-center">{PHP.L.projects_lastprojects}</h2>
+				<div class="row">
+					<div class="col-lg-12">
+						{PROJECTS}
+					</div>
+				</div>
+			</div>
+		</div>
+
+<!-- ТОП-АВТОРОВ -->
+
+		<!-- IF {PHP.cot_plugins_active.userpoints} -->
+	<div class="topusers">
+		<div class="top-authors">
+			<div class="container">
+				<h2 class="text-center">
+					{PHP.L.userpoints_topfreelancers}
+				</h2>
+				{PHP|cot_get_topusers (4, 5)}
+			</div>
+		</div>
+
+		<div class="top-employers">
+			<div class="container">
+				<h2 class="text-center">
+					{PHP.L.userpoints_topemployers}
+				</h2>
+				{PHP|cot_get_topusers (7, 5)}
 			</div>
 		</div>
 	</div>
-</div>
-
-
-<div class="row">
-	<div class="span3">
-
-		<!-- IF {PHP.cot_plugins_active.userpoints} -->
-		<h4 class="mboxHD">{PHP.L.userpoints_topfreelancers}</h4>
-		{PHP|cot_get_topusers (4, 5)}
-		<br/>
-		<br/>
-		<h4 class="mboxHD">{PHP.L.userpoints_topemployers}</h4>
-		{PHP|cot_get_topusers (7, 5)}
 		<!-- ENDIF -->
 
 		<!-- IF {INDEX_NEWS} -->
-		<br/>
-		<br/>
-		<div class="block">
-			{INDEX_NEWS}
+		<div class="news">
+			<div class="container">
+				<h2 class="text-center">{PHP.L.index_news}</h2>
+				{INDEX_NEWS}
+			</div>
 		</div>
 		<!-- ENDIF -->
-	</div>
 
-</div>
 
 <!-- END: MAIN -->
