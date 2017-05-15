@@ -11,10 +11,10 @@
 		<!-- IF {PHP.usr.auth_write} -->
 		<li class="pull-right"><noindex><a rel="nofollow" class="btn btn-success" href="{PHP|cot_url('projects', 'm=add')}" title="{PHP.L.projects_add_to_catalog}">{PHP.L.projects_add_to_catalog}</a></noindex></li>
 		<!-- ENDIF -->
-	</ul>	
+	</ul>
 	<!-- END: PTYPES -->
 
-	<div class="well">			
+	<div class="well">
 		<form action="{SEARCH_ACTION_URL}" method="get">
 			<input type="hidden" name="e" value="projects" />
 			<table width="100%" cellpadding="5" cellspacing="0">
@@ -40,7 +40,7 @@
 					<td></td>
 					<td><input type="submit" name="search" class="btn" value="{PHP.L.Search}" /></td>
 				</tr>
-			</table>		
+			</table>
 		</form>
 	</div>
 <!-- END: SEARCH -->
@@ -55,9 +55,9 @@
 		</h4>
 		<p class="owner small">{PRJ_ROW_OWNER_NAME} <span class="date">[{PRJ_ROW_DATE}]</span>   <span class="region">{PRJ_ROW_COUNTRY} {PRJ_ROW_REGION} {PRJ_ROW_CITY}</span>   {PRJ_ROW_EDIT_URL}</p>
 		<p class="text">{PRJ_ROW_SHORTTEXT}</p>
-		
+
 		<!-- IF {PHP.cot_plugins_active.tags} AND {PHP.cot_plugins_active.tagslance} AND {PHP.cfg.plugin.tagslance.projects} -->
-		<p class="small">{PHP.L.Tags}: 
+		<p class="small">{PHP.L.Tags}:
 			<!-- BEGIN: PRJ_ROW_TAGS_ROW --><!-- IF {PHP.tag_i} > 0 -->, <!-- ENDIF --><a href="{PRJ_ROW_TAGS_ROW_URL}" title="{PRJ_ROW_TAGS_ROW_TAG}" rel="nofollow">{PRJ_ROW_TAGS_ROW_TAG}</a><!-- END: PRJ_ROW_TAGS_ROW -->
 			<!-- BEGIN: PRJ_ROW_NO_TAGS -->{PRJ_ROW_NO_TAGS}<!-- END: PRJ_ROW_NO_TAGS -->
 		</p>

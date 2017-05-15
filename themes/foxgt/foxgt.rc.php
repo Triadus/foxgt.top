@@ -13,6 +13,7 @@ defined('COT_CODE') or die('Wrong URL.');
 
 
 cot_rc_add_file($cfg['themes_dir'].'/'.$usr['theme'].'/bootstrap/css/bootstrap.min.css');
+cot_rc_add_file($cfg['themes_dir'].'/'.$usr['theme'].'/bootstrap/js/bootstrap.min.js');
 // cot_rc_add_file($cfg['themes_dir'].'/'.$usr['theme'].'/bootstrap/css/bootstrap-responsive.min.css');
 
 cot_rc_add_file($cfg['themes_dir'].'/'.$usr['theme'].'/css/modalbox.css');

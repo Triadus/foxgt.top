@@ -20,3 +20,4 @@ $L['header_notice'] = 'Есть уведомления';
 $L['Firstname'] = 'Имя';
 $L['Contact'] = 'Поддержка';
 $L['Authorization'] = 'Авторизация';
+$L['projects_lastprojects'] = 'Последние проекты';

@@ -19,7 +19,6 @@
 
 <body>
 
-<!--Всплывающее окно авторизации  -->
 
 	<!-- IF {PHP.usr.id} == 0 -->
 	<div id="AuthModal" class="modal fade">
@@ -54,9 +53,9 @@
 							</div>
 
 							<div class="form-group author">
-								<div class="col-lg-9 col-lg-offset-3">
-									<button type="submit" class="btn btn-warning">{PHP.L.Login}</button>
-									<button type="button" class="btn btn-default" data-dismiss="modal">{PHP.L.Close}</button>
+								<div class="col-lg-7 col-lg-offset-3">
+									<button type="submit" class="btn btn-warning btn-block">{PHP.L.Login}</button>
+									<button type="button" class="btn btn-default btn-block" data-dismiss="modal">{PHP.L.Close}</button>
 								</div>
 							</div>
 						</fieldset>
@@ -70,7 +69,7 @@
 	<div class="support">
 		<div class="container">
 			<div class="row">
-					<div class="col-lg-11 col-md-8 col-sm-8 col-xs-12 phone">
+					<div class="col-lg-10 col-lg-offset-1 col-md-8 col-sm-8 col-xs-12 phone">
 						Поддержка:
 						<i class="fa fa-phone" aria-hidden="true"></i>
 							+38 048 770 7468 |
@@ -89,7 +88,7 @@
 		</div>
 	</div>
 
-<!-- ВНУТРЕННЕЕ МЕНЮ -->
+
 
 	<nav class="navbar-inverse">
 		<div class="container-fluid">
@@ -186,8 +185,6 @@
 		</div>
 	</nav>
 
-<!-- Секция HEADER -->
-<!-- BEGIN: GUEST -->
 
 	<header>
 		<div class="container">
@@ -214,40 +211,17 @@
 					</nav>
 				</div>
 
+<!-- BEGIN: GUEST -->
 				<div class="col-lg-3 col-md-8 col-sm-8 register">
 					<ul class="nav navbar-nav">
 						<li class="nav-item"><a class="btn-warning button-glow" href="{PHP|cot_url('users','m=register')}">{PHP.L.Register}</a></li>
-						<li class="nav-item"><a class="btn-warning button-glow" href="{PHP|cot_url('login')}" data-toggle="modal" onClick="$('#AuthModal').modal(); return false;">{PHP.L.Login}</a></li>
+						<li class="nav-item"><a class="btn-warning button-glow" href="{PHP|cot_url('login')}" data-toggle="modal" onclick="$('#AuthModal').modal(); return false;">{PHP.L.Login}</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
-
-		<section class="slider">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<h1>Биржа копирайтинга</h1>
-					</div>
-					<div class="row">
-						<div class="col-md-3">
-							<p>Копирайтинг</p>
-						</div>
-						<div class="col-md-3">
-							<p>Рерайтинг</p>
-						</div>
-						<div class="col-md-3">
-							<p>SEO копирайтинг</p>
-						</div>
-						<div class="col-md-3">
-							<p>Перевод</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+<!-- END: GUEST -->
 	</header>
-	<!-- END: GUEST -->
 
 	<div class="content">
 

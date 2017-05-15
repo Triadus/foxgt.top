@@ -1,4 +1,4 @@
-<?php 
+<?php
 $L["cfg_cache_db"] = array("Кешировать запрос db", "Включить кеширование запроса");
 $L["cfg_cache_db_ttl"] = array("Период обновления кеша db", "Время жизни кеша db в сек");
 $L["cfg_count_usr"] = "Считать количество пользователей";
@@ -9,9 +9,9 @@ $L["cfg_projects_item_state"] = array("Статус проектов для по
 $L['cfg_projects_from'] = array("Считать количество отрытых проектов за последние (сек)", "0 - отключено");
 $L['cfg_market_count'] = array("Считать количество опубликованных товаров");
 $L['fr_users_title'] = 'Пользователей';
-$L['fr_freelancers_title'] = 'Исполнителей';
-$L['fr_employers_title'] = 'Работодалетей';
+$L['fr_freelancers_title'] = 'Авторов';
+$L['fr_employers_title'] = 'Заказчиков';
 $L['fr_traders_title'] = 'Торговых представителей';
 $L['fr_projects_title'] = 'Открытых проектов';
-$L['fr_projects_from_title'] = 'Открытых проектов за последнее время';
+$L['fr_projects_from_title'] = 'Проектов за последнее время';
 $L['fr_market_title'] = 'Товаров';
