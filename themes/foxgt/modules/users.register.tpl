@@ -1,68 +1,84 @@
 <!-- BEGIN: MAIN -->
 
-	<div class="breadcrumb">{USERS_REGISTER_TITLE}</div>
-	<div class="well">
-		{FILE "{PHP.cfg.themes_dir}/{PHP.cfg.defaulttheme}/warnings.tpl"}
-		<form name="login" action="{USERS_REGISTER_SEND}" method="post" enctype="multipart/form-data" >
-			<table class="table">
-				<!-- IF {USERS_REGISTER_GROUPSELECT} -->
-				<tr>
-					<td class="width30">{PHP.L.profile_group}:</td>
-					<td class="width70">{USERS_REGISTER_GROUPSELECT} *</td>
-				</tr>
-				<!-- ENDIF -->
-				<tr>
-					<td class="width30">{PHP.L.Username}:</td>
-					<td class="width50">{USERS_REGISTER_USER} *</td>
-				</tr>
-				<tr>
-					<td>{USERS_REGISTER_FIRSTNAME_TITLE}</td>
-					<td>{USERS_REGISTER_FIRSTNAME}</td>
-				</tr>
-				<!-- IF {PHP.cot_plugins_active.locationselector} -->
-				<tr>
-					<td>{PHP.L.Country}:</td>
-					<td>{USERS_REGISTER_LOCATION}</td>
-				</tr>
-				<!-- ELSE -->
-				<tr>
-					<td>{PHP.L.Country}:</td>
-					<td>{USERS_REGISTER_COUNTRY}</td>
-				</tr>
-				<!-- ENDIF -->
-				<tr>
-					<td>{PHP.L.users_validemail}:</td>
-					<td>
-						{USERS_REGISTER_EMAIL} *
-						<p class="small">{PHP.L.users_validemailhint}</p>
-					</td>
-				</tr>
-				<tr>
-					<td>{PHP.L.Password}:</td>
-					<td>{USERS_REGISTER_PASSWORD} *</td>
-				</tr>
-				<tr>
-					<td>{PHP.L.users_confirmpass}:</td>
-					<td>{USERS_REGISTER_PASSWORDREPEAT} *</td>
-				</tr>
-				<tr>
-					<td>{USERS_REGISTER_VERIFYIMG}</td>
-					<td>{USERS_REGISTER_VERIFYINPUT} *</td>
-				</tr>
-				<!-- IF {USERS_REGISTER_USERAGREEMENT} -->
-				<tr>
-					<td>{PHP.L.useragreement}</td>
-					<td><label class="checkbox">{USERS_REGISTER_USERAGREEMENT} *</label></td>
-				</tr>
-				<!-- ENDIF -->
-				<tr>
-					<td></td>
-					<td>
-						<button class="btn btn-primary btn-large">{PHP.L.Submit}</button>
-					</td>
-				</tr>
-			</table>
-		</form>
+	<div class="register">
+		<div class="container">
+			<h3 class="text-center">{USERS_REGISTER_TITLE}</h3>
+
+				<div class="panel panel-default">
+						{FILE "{PHP.cfg.themes_dir}/{PHP.usr.theme}/warnings.tpl"}
+						<form id="form_register" name="form_register" action="{USERS_REGISTER_SEND}" class="form-horizontal" method="post">
+
+							<!-- IF {USERS_REGISTER_GROUPSELECTBOX} -->
+							<div class="form-group row">
+								<label class="form-control-label col-md-4">{PHP.L.profile_group}:</label>
+								<div class="col-md-8">
+									{USERS_REGISTER_GROUPSELECTBOX}
+								</div>
+							</div>
+							<!-- ENDIF -->
+
+							<!-- IF {USERS_REGISTER_COMPANY} -->
+							<div class="form-group row sr-only">
+								<label class="form-control-label col-md-4">{USERS_REGISTER_COMPANY_TITLE}:</label>
+								<div class="col-md-8">{USERS_REGISTER_COMPANY}</div>
+							</div>
+							<!-- ENDIF -->
+							<!-- IF {USERS_REGISTER_FIRSTNAME} -->
+							<div class="form-group row">
+								<label class="form-control-label col-md-4">{USERS_REGISTER_FIRSTNAME_TITLE}:</label>
+								<div class="col-md-8">{USERS_REGISTER_FIRSTNAME}</div>
+							</div>
+							<!-- ENDIF -->
+							<!-- IF {USERS_REGISTER_MIDDLENAME} -->
+							<div class="form-group row">
+								<label class="form-control-label col-md-4">{USERS_REGISTER_MIDDLENAME_TITLE}:</label>
+								<div class="col-md-8">{USERS_REGISTER_MIDDLENAME}</div>
+							</div>
+							<!-- ENDIF -->
+							<!-- IF {USERS_REGISTER_PHONE} -->
+							<div class="form-group row">
+								<label class="form-control-label col-md-4">Мобильный телефон:</label>
+								<div class="col-md-8">{USERS_REGISTER_PHONE}</div>
+							</div>
+							<!-- ENDIF -->
+							<div class="form-group row">
+								<label class="form-control-label col-md-4">{PHP.L.Username}:</label>
+								<div class="col-md-8">{USERS_REGISTER_USER}</div>
+							</div>
+							<div class="form-group row">
+								<label class="form-control-label col-md-4">{PHP.L.Email}:</label>
+								<div class="col-md-8">
+									{USERS_REGISTER_EMAIL}
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="form-control-label col-md-4">{PHP.L.Password}:</label>
+								<div class="col-md-8">{USERS_REGISTER_PASSWORD}</div>
+							</div>
+							<div class="form-group row">
+								<label class="form-control-label col-md-4">{PHP.L.users_confirmpass}:</label>
+								<div class="col-md-8">{USERS_REGISTER_PASSWORDREPEAT}</div>
+							</div>
+							<div class="form-group row">
+								<label class="form-control-label col-md-4">{USERS_REGISTER_VERIFYIMG}</label>
+								<div class="col-md-8">{USERS_REGISTER_VERIFYINPUT}</div>
+							</div>
+							<!-- IF {PHP.cot_plugins_active.useragreement} -->
+							<div class="form-group text-xs-center">
+								{PHP|cot_checkbox(0, 'ruseragreement', '')} <a href="{PHP|cot_url('plug', 'e=useragreement')}" target="blank">{PHP.L.useragreement_agree}</a>
+							</div>
+							<!-- ENDIF -->
+							<br/>
+							<br/>
+							<div class="form-group row">
+								<div class="text-xs-center"><button type="submit" name="submit" class="btn btn-success btn-lg">{PHP.L.Register}</button></div>
+							</div>
+						</form>
+				</div>
+		</div>
 	</div>
+
+
+
 
 <!-- END: MAIN -->

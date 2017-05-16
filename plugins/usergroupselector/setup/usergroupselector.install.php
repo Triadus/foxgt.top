@@ -45,8 +45,8 @@ if($group_exists)
 $group_exists = (bool)$db->query("SELECT grp_id FROM $db_groups WHERE grp_alias='employer'")->fetch();
 if(!$group_exists)
 {
-	$rgroups['grp_name'] = 'Работодатели';
-	$rgroups['grp_title'] = 'Работодатель';
+	$rgroups['grp_name'] = 'Заказчики';
+	$rgroups['grp_title'] = 'Заказчик';
 	$rgroups['grp_desc'] = '';
 	$rgroups['grp_icon'] = '';
 	$rgroups['grp_alias'] = 'employer';

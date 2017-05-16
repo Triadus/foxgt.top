@@ -102,5 +102,5 @@
 		</div>
 		<!-- ENDIF -->
 
-
+	</div>
 <!-- END: MAIN -->
