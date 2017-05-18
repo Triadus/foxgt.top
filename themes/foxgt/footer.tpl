@@ -34,8 +34,6 @@
 	</footer>
 
 
-	{FOOTER_RC}
-
 </body>
 </html>
 <!-- END: FOOTER -->

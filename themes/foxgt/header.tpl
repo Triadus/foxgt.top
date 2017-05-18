@@ -51,20 +51,18 @@
 							</div>
 
 							<div class="form-group">
-								<div class="row justify-content-end">
-									<div class="col-12 text-right">
-										<label>
-											<input type="checkbox">{PHP.L.users_rememberme}
+									<div class="form-check text-right">
+										<label class="form-check-label">
+											{HEADER_GUEST_COOKIETTL} {PHP.L.users_rememberme}
 										</label>
 									</div>
-								</div>
 							</div>
 
 								<div class="form-group">
 									<div class="row">
 										<div class="col-12 text-right">
 											<button type="submit" class="btn btn-warning">{PHP.L.Login}</button>
-											<button type="button" class="btn btn-default" data-dismiss="modal">{PHP.L.Close}</button>
+											<button type="button" class="btn btn-secondary" data-dismiss="modal">{PHP.L.Close}</button>
 										</div>
 									</div>
 								</div>
