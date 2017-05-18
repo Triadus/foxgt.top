@@ -4,19 +4,23 @@
 		<div class="container">
 			<h3 class="text-center">{USERS_REGISTER_TITLE}</h3>
 
-				<div class="panel panel-default">
+			<h3 class="text-lg-center">{USERS_REGISTER_TITLE}</h3>
+
+			<div class="row m-t-1">
+				<div class="col-md-6 col-md-offset-3">
+					<div class="card card-block">
 						{FILE "{PHP.cfg.themes_dir}/{PHP.usr.theme}/warnings.tpl"}
 						<form id="form_register" name="form_register" action="{USERS_REGISTER_SEND}" class="form-horizontal" method="post">
-
 							<!-- IF {USERS_REGISTER_GROUPSELECTBOX} -->
 							<div class="form-group row">
 								<label class="form-control-label col-md-4">{PHP.L.profile_group}:</label>
 								<div class="col-md-8">
-									{USERS_REGISTER_GROUPSELECTBOX}
+									<div class="custombox">
+										{USERS_REGISTER_GROUPSELECTBOX}
+									</div>
 								</div>
 							</div>
 							<!-- ENDIF -->
-
 							<!-- IF {USERS_REGISTER_COMPANY} -->
 							<div class="form-group row sr-only">
 								<label class="form-control-label col-md-4">{USERS_REGISTER_COMPANY_TITLE}:</label>
@@ -74,7 +78,9 @@
 								<div class="text-xs-center"><button type="submit" name="submit" class="btn btn-success btn-lg">{PHP.L.Register}</button></div>
 							</div>
 						</form>
+					</div>
 				</div>
+			</div>
 		</div>
 	</div>
 
