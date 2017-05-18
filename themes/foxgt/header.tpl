@@ -25,41 +25,51 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
+					<h3 class="modal-title" >{PHP.L.Authorization}</h3>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-					<h3 class="modal-title">{PHP.L.Authorization}</h3>
 				</div>
 				<div class="modal-body">
-					<form class="form-horizontal" action="{HEADER_GUEST_SEND}" method="post">
-						<fieldset>
-
+					<div class="container-fluid">
+						<form class="form-horizontal" action="{HEADER_GUEST_SEND}" method="post">
 							<div class="form-group">
-								<label for="inputEmail" class="col-lg-3 control-label">{PHP.L.users_nameormail}</label>
-								<div class="col-lg-9">
-									<input class="form-control" name="rusername" id="inputEmail" placeholder="Login or Email" type="text">
+								<div class="row">
+									<label for="inputEmail" class="col-lg-4 control-label">{PHP.L.users_nameormail}</label>
+									<div class="col-lg-8">
+										<input class="form-control" name="rusername" id="inputEmail" placeholder="Login or Email" type="text">
+									</div>
 								</div>
 							</div>
 
 							<div class="form-group">
-								<label for="inputPassword" class="col-lg-3 control-label">{PHP.L.Password}</label>
-								<div class="col-lg-9">
-									<input class="form-control" id="inputPassword" name="rpassword" placeholder="Password" type="password">
-									<a rel="nofollow" class="link small" href="{PHP|cot_url('users','m=passrecover')}">{PHP.L.users_lostpass}</a>
-									<div class="checkbox">
+								<div class="row">
+									<label for="inputPassword" class="col-lg-4 control-label">{PHP.L.Password}</label>
+									<div class="col-lg-8">
+										<input class="form-control" id="inputPassword" name="rpassword" placeholder="Password" type="password">
+										<a rel="nofollow" class="link small" href="{PHP|cot_url('users','m=passrecover')}">{PHP.L.users_lostpass}</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="row justify-content-end">
+									<div class="col-12 text-right">
 										<label>
-											<input type="checkbox">{HEADER_GUEST_COOKIETTL} {PHP.L.users_rememberme}
+											<input type="checkbox">{PHP.L.users_rememberme}
 										</label>
 									</div>
 								</div>
 							</div>
 
-							<div class="form-group author">
-								<div class="col-lg-7 col-lg-offset-3">
-									<button type="submit" class="btn btn-warning btn-block">{PHP.L.Login}</button>
-									<button type="button" class="btn btn-default btn-block" data-dismiss="modal">{PHP.L.Close}</button>
+								<div class="form-group">
+									<div class="row">
+										<div class="col-12 text-right">
+											<button type="submit" class="btn btn-warning">{PHP.L.Login}</button>
+											<button type="button" class="btn btn-default" data-dismiss="modal">{PHP.L.Close}</button>
+										</div>
+									</div>
 								</div>
-							</div>
-						</fieldset>
-					</form>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -69,20 +79,21 @@
 	<div class="support">
 		<div class="container">
 			<div class="row">
-					<div class="col-lg-10 col-lg-offset-1 col-md-8 col-sm-8 col-xs-12 phone">
+					<div class="col-lg-12 col-md-8 col-sm-8 col-xs-12 phone">
 						Поддержка:
 						<i class="fa fa-phone" aria-hidden="true"></i>
 							+38 048 770 7468 |
 						<i class="fa fa-envelope-o" aria-hidden="true"></i>
 							fox.gt.sales@gmail.com
+							<!-- BEGIN: I18N_LANG -->
+							<!-- BEGIN: I18N_LANG_ROW -->
+							<a href="{I18N_LANG_ROW_URL}" class="{I18N_LANG_ROW_CLASS} translit"><img src="images/flags/{I18N_LANG_ROW_FLAG}.png"/></a>
+							<!-- END: I18N_LANG_ROW -->
+							<!-- END: I18N_LANG -->
 					</div>
 
-					<div class="col-lg-1 col-md-4 col-sm-4 hidden-xs translit">
-						<!-- BEGIN: I18N_LANG -->
-						<!-- BEGIN: I18N_LANG_ROW -->
-						<a href="{I18N_LANG_ROW_URL}" class="{I18N_LANG_ROW_CLASS}"><img src="images/flags/{I18N_LANG_ROW_FLAG}.png"/></a>
-						<!-- END: I18N_LANG_ROW -->
-						<!-- END: I18N_LANG -->
+					<div class="col-lg-1 col-md-4 col-sm-4 hidden-xs translit text-right">
+
 					</div>
 			</div>
 		</div>
@@ -90,23 +101,44 @@
 
 
 
-	<nav class="navbar-inverse">
+	<nav class="navbar-inverse bg-inverse navbar-toggleable-md">
 		<div class="container-fluid">
 
 			<!-- BEGIN: USER -->
 
-			<div class="navbar-header hidden-sm">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-				<a class="navbar-brand" href="{PHP.usr.name|cot_url('users', 'm=details&u='$this)}">{PHP.usr.name}</a>
-			</div>
+			<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+			  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+			  <a class="navbar-brand" href="#">Navbar</a>
 
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-				<ul class="nav navbar-nav">
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav mr-auto">
+			      <li class="nav-item active">
+			        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#">Link</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link disabled" href="#">Disabled</a>
+			      </li>
+			    </ul>
+			    <form class="form-inline my-2 my-lg-0">
+			      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+			      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			    </form>
+			  </div>
+			</nav>
 
+
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<a class="navbar-brand" href="{PHP.usr.name|cot_url('users', 'm=details&u='$this)}">{PHP.usr.name}</a>
+
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
 
 
 					<!-- IF {PHP.cot_modules.payments} AND {PHP.cfg.payments.balance_enabled} -->
@@ -194,9 +226,9 @@
 					<div class="logo"><a href="{PHP|cot_url('index')}" title="{PHP.cfg.maintitle} {PHP.cfg.separator} {PHP.cfg.subtitle}"><img src="themes/{PHP.theme}/img/logo.png"/></a></div>
 				</div>
 
-				<div class="col-lg-7 menu-center">
-					<nav class="navbar navbar-default">
-						<ul class="nav navbar-nav">
+				<div class="col-lg-7">
+					<nav class="navbar-toggleable">
+						<ul class="nav">
 							<li class="nav-item"><a class="nav-link<!-- IF {PHP.env.ext} == 'index' --> active<!-- ENDIF -->" href="{PHP|cot_url('index')}">{PHP.L.Home}</a></li>
 							<li class="nav-item"><a class="nav-link<!-- IF {PHP.env.ext} == 'projects' --> active<!-- ENDIF -->" href="{PHP|cot_url('projects')}">{PHP.L.projects_projects}</a></li>
 							<li class="nav-item"><a class="nav-link<!-- IF {PHP.env.ext} == 'users' AND ({PHP.group} == {PHP.cot_groups.4.alias} OR {PHP.urr.user_maingrp} == 4) --> active<!-- ENDIF -->" href="{PHP.cot_groups.4.alias|cot_url('users', 'group='$this)}">{PHP.cot_groups.4.name}</a></li>
@@ -212,12 +244,12 @@
 				</div>
 
 <!-- BEGIN: GUEST -->
-				<div class="col-lg-3 col-md-8 col-sm-8 register">
-					<ul class="nav navbar-nav">
-						<li class="nav-item"><a class="btn-warning button-glow" href="{PHP|cot_url('users','m=register')}">{PHP.L.Register}</a></li>
-						<li class="nav-item"><a class="btn-warning button-glow" href="{PHP|cot_url('login')}" data-toggle="modal" onclick="$('#AuthModal').modal(); return false;">{PHP.L.Login}</a></li>
-					</ul>
-				</div>
+					<div class="col-lg-3 register">
+						<ul class="nav">
+							<li class="nav-item"><a class="btn-warning button-glow" href="{PHP|cot_url('users','m=register')}">{PHP.L.Register}</a></li>
+							<li class="nav-item"><a class="btn-warning button-glow" href="{PHP|cot_url('login')}" data-toggle="modal" onclick="$('#AuthModal').modal(); return false;">{PHP.L.Login}</a></li>
+						</ul>
+					</div>
 			</div>
 		</div>
 <!-- END: GUEST -->

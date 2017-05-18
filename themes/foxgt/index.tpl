@@ -3,33 +3,29 @@
 		<div class="slider">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12">
+					<div class="col-12">
 						<h1>Биржа копирайтинга</h1>
 					</div>
-					<div class="row">
-						<div class="col-md-3">
-							<p>Копирайтинг</p>
-						</div>
-						<div class="col-md-3">
-							<p>Рерайтинг</p>
-						</div>
-						<div class="col-md-3">
-							<p>SEO копирайтинг</p>
-						</div>
-						<div class="col-md-3">
-							<p>Перевод</p>
-						</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-3 col-md-6">
+						<p>Копирайтинг</p>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<p>Рерайтинг</p>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<p>SEO копирайтинг</p>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<p>Перевод</p>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<div class="count">
-			<div class="container">
-				<div class="row">
-					{INDEX_COUNTER_TAG}
-				</div>
-			</div>
+			{INDEX_COUNTER_TAG}
 		</div>
 
 <!-- Место для рекламмы PAYTOP -->
@@ -61,11 +57,7 @@
 		<div class="projects">
 			<div class="container">
 				<h2 class="text-center">{PHP.L.projects_lastprojects}</h2>
-				<div class="row">
-					<div class="col-lg-12">
-						{PROJECTS}
-					</div>
-				</div>
+					{PROJECTS}
 			</div>
 		</div>
 

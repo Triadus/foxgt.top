@@ -47,22 +47,20 @@ textarea
 /* 1. Main Navigation
 	*--------------------------------------------------
 
-.navbar-default
+.navbar-toggleable
 	border: none
 	background-color: #fff
 
 
-.navbar-default .navbar-nav > li > a
+.navbar-toggleable .nav > li > a
 	color: #000
 	font-size: 17px
-	padding-right: 17px
 	padding-top: 16px
 	font-family: "MyriadSetProText", sans-serif
 	&:hover
 		text-decoration: underline
 	&.active
 		color: orange
-
 
 .nav-pills
 	.nav-link
@@ -90,7 +88,8 @@ textarea
 
 .support
 	background-color: #333333
-	padding: 6px 0
+	padding: 6px
+	color: orange
 	.phone
 		color: orange
 		font-size: 14px
@@ -102,7 +101,8 @@ textarea
 			font-size: 16px
 			color: #fff
 	.translit
-		text-align: right
+		float: right
+		padding-left: 5px
 
 .navbar-inverse
 	.navbar-nav > li > a
@@ -124,26 +124,35 @@ textarea
 // Секция HEADER
 
 header
+	nav
+		padding-bottom: 8px
 	padding: 5px 0 0
 	.logo
 		img
 			width: 124px
 			height: auto
+	.specialwrapp
+		.col-lg-3, .col-md-8
+			padding-left: 0!important
+			padding-right: 0!important
 
-	.menu-center
-		nav.navbar.navbar-default
-			margin-bottom: 3px
 
 	.register
+		padding-top: 10px
+
 		.nav > li > a:focus, .nav > li > a:hover
 			background-color: #337ab7
 			color: #fff
+			text-decoration: none
+
 		li
 			padding: 5px 5px
 		.btn-warning
 			padding: 8px 14px
 			color: #000
 			font-family: "Roboto Slab", sans-serif
+
+
 
 
 			// MAIN
@@ -194,8 +203,7 @@ header
 		font-family: "Comfortaa", sans-serif
 
 .content
-	flex: 1 0 auto
-	.panel-heading
+	.card-header
 		font-family: "MyriadSetProSemiBold", sans-serif
 		h4
 			a
@@ -206,8 +214,8 @@ header
 		font-family: "Roboto Slab", sans-serif
 
 .projects
-	padding: 20px 0
-	.panel-body
+	padding: 80px 0
+	.card-block
 		.zakaz
 			a
 				font-family: "Exo 2", sans-serif
@@ -218,7 +226,7 @@ header
 					color: #fff
 					transition: 0.2s ease
 		.project-text
-			font-family: "Exo 2", sans-serif
+			font-family: "MyriadSetProText", sans-serif
 			font-size: 15px
 		.name-user
 			border: 1px solid orange
@@ -230,14 +238,13 @@ header
 
 
 .topusers
-	padding-bottom: 40px
+	padding: 30px 0
 	.top-authors, .top-employers
-		padding: 30px 0
+		padding: 40px 0
 	background-color: #f7f7f7
 	.media
 		border-right: 1px solid #DEDEE6
 		padding: 10px
-	.media-left
 		border-radius: 5px
 		img
 			border: 1px solid #DEDEE6
@@ -258,14 +265,28 @@ header
 			color: #000
 
 .news
-	padding: 40px 0
+	padding: 80px 0
+	font-family: "MyriadSetProText", sans-serif
 
 
 footer
-	border-top: #DEDEE6 solid 1px
-	padding: 10px 0
-	height: 60px
-	flex: 0 0 auto
+	height: 80px
+	background-color: #333333
+
+	.support-footer
+		background-color: #333333
+		padding-top: 30px
+		color: orange
+		.phone
+			color: orange
+			font-size: 14px
+			font-family: "Comfortaa", sans-serif
+			list-style-type: none
+			text-align: center
+			.fa
+				padding: 0 2px 0 5px
+				font-size: 16px
+				color: #fff
 
 .block
 		margin: 0 0 25px
@@ -749,21 +770,22 @@ ol
 /* 13. Login form
 	*---------------------------------------------------
 
-.form-signin
-		padding: 7px 19px 19px 19px
-		background-color: #fff
-		border: 1px solid #e5e5e5
-		-webkit-border-radius: 5px
-		-moz-border-radius: 5px
-		border-radius: 5px
-		-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05)
-		-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05)
-		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05)
-		.checkbox
-				margin-bottom: 20px
+// .form-signin
+// 		padding: 7px 19px 19px 19px
+// 		background-color: #fff
+// 		border: 1px solid #e5e5e5
+// 		-webkit-border-radius: 5px
+// 		-moz-border-radius: 5px
+// 		border-radius: 5px
+// 		-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05)
+// 		-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05)
+// 		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05)
+// 		.checkbox
+// 				margin-bottom: 20px
 
 #AuthModal
 	font-family: "Roboto Slab", sans-serif
+	font-size: 15px
 	border-radius: 0
 	.modal-header
 		text-align: center
@@ -771,11 +793,25 @@ ol
 		border-radius: 0
 	button
 		color: #000
+	.form-group
+
 
 .register
 	font-family: "Roboto Slab", sans-serif
+	.navbar-nav .nav-item+ .nav-item
+		margin-left: 0
+	.form-group
+		a
+			color: #000
+			&:hover
+				text-decoration: none
 	h3
 		padding: 20px 0
+	.btn-warning
+		padding: 8px 14px
+		color: #000
+		font-family: "Roboto Slab", sans-serif
+
 
 /* Mavatars
 	*----------------------------------------------------

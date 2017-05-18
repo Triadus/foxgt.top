@@ -2,10 +2,7 @@
 
 	<div class="register">
 		<div class="container">
-			<h3 class="text-center">{USERS_REGISTER_TITLE}</h3>
-
 			<h3 class="text-lg-center">{USERS_REGISTER_TITLE}</h3>
-
 			<div class="row m-t-1">
 				<div class="col-md-6 col-md-offset-3">
 					<div class="card card-block">
@@ -72,10 +69,8 @@
 								{PHP|cot_checkbox(0, 'ruseragreement', '')} <a href="{PHP|cot_url('plug', 'e=useragreement')}" target="blank">{PHP.L.useragreement_agree}</a>
 							</div>
 							<!-- ENDIF -->
-							<br/>
-							<br/>
 							<div class="form-group row">
-								<div class="text-xs-center"><button type="submit" name="submit" class="btn btn-success btn-lg">{PHP.L.Register}</button></div>
+								<div class="text-xs-center"><button type="submit" name="submit" class="btn btn-warning btn-md">{PHP.L.Register}</button></div>
 							</div>
 						</form>
 					</div>

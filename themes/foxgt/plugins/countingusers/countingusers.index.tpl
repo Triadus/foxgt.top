@@ -4,9 +4,9 @@
 
 <div class="c-user">
 	<div class="container">
-		<div class="row">
+		<div class="row justify-content-center">
 
-			<div class="col-md-offset-1 col-md-2 col-sm-4 col-xs-6">
+			<div class="col-md-2 col-sm-4 col-xs-6">
 				<!-- IF {INDEX_COUNT_USR_ALL} -->
 				<i class="fa fa-users" aria-hidden="true"></i>
 				<div class="numeral">

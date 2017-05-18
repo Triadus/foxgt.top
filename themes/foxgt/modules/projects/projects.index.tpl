@@ -1,4 +1,4 @@
-<!-- BEGIN: SEARCH -->
+card<!-- BEGIN: SEARCH -->
 	<!-- BEGIN: PTYPES -->
 	<div class="nav nav-tabs">
 		<li class="active"><a href="{PTYPE_ALL_URL}">{PHP.L.All}</a></li>
@@ -46,44 +46,45 @@
 <!-- END: SEARCH -->
 
 <!-- BEGIN: PROJECTS -->
-
 		<!-- BEGIN: PRJ_ROWS -->
-		<div class="panel panel-success<!-- IF {PRJ_ROW_ISBOLD} --> panel-info<!-- ENDIF --><!-- IF {PRJ_ROW_ISTOP} --> panel-primary<!-- ENDIF -->">
-			<div class="panel-heading">
-				<div class="row">
-					<div class="col-lg-6">
-						<h4>
-							<a href="{PRJ_ROW_URL}">{PRJ_ROW_SHORTTITLE}</a>
-						</h4>
+				<div class="card <!-- IF {PRJ_ROW_ISBOLD} --> <!-- ENDIF --><!-- IF {PRJ_ROW_ISTOP} --> <!-- ENDIF -->">
+					<div class="card-header card-warning">
+						<div class="row">
+							<div class="col-lg-6">
+								<h4>
+									<a href="{PRJ_ROW_URL}">{PRJ_ROW_SHORTTITLE}</a>
+								</h4>
+							</div>
+							<div class="col-lg-6 text-right">
+								<!-- IF {PHP.cot_plugins_active.paypro} AND {PRJ_ROW_FORPRO} -->
+								<span class="badge badge-pill badge-danger">{PHP.L.paypro_forpro}</span>
+								<!-- ENDIF -->
+								<!-- IF {PRJ_ROW_COST} > 0 -->
+								<span>{PRJ_ROW_COST} {PHP.cfg.payments.valuta}</span>
+								<!-- ENDIF -->
+							</div>
+						</div>
 					</div>
-					<div class="col-lg-6 text-right alert-link">
-						<!-- IF {PRJ_ROW_COST} > 0 -->
-						{PRJ_ROW_COST} {PHP.cfg.payments.valuta}
+					<div class="card-block">
+						<p class="zakaz"><span class="name-user">{PRJ_ROW_OWNER_NAME}</span> | <span class="text-muted date">{PRJ_ROW_DATE_STAMP|cot_date('j F Y', $this)}</span> | <span class="text-muted region">{PRJ_ROW_COUNTRY} {PRJ_ROW_REGION} {PRJ_ROW_CITY}</span>{PRJ_ROW_EDIT_URL}</p>
+						<p class="text project-text">{PRJ_ROW_SHORTTEXT}</p>
+
+						<!-- IF {PHP.cot_plugins_active.tags} AND {PHP.cot_plugins_active.tagslance} AND {PHP.cfg.plugin.tagslance.projects} -->
+						<p class="small">{PHP.L.Tags}:
+							<!-- BEGIN: PRJ_ROW_TAGS_ROW --><!-- IF {PHP.tag_i} > 0 -->, <!-- ENDIF -->
+							<a href="{PRJ_ROW_TAGS_ROW_URL}" title="{PRJ_ROW_TAGS_ROW_TAG}" rel="nofollow">{PRJ_ROW_TAGS_ROW_TAG}</a><!-- END: PRJ_ROW_TAGS_ROW -->
+							<!-- BEGIN: PRJ_ROW_NO_TAGS -->{PRJ_ROW_NO_TAGS}<!-- END: PRJ_ROW_NO_TAGS -->
+						</p>
 						<!-- ENDIF -->
+
+						<div class="pull-right offers"><a class="btn btn-secondary" href="{PRJ_ROW_OFFERS_ADDOFFER_URL}">{PHP.L.offers_add_offer} ({PRJ_ROW_OFFERS_COUNT})</a></div>
+						<div class="type">
+							<!-- IF {PRJ_ROW_TYPE} -->{PRJ_ROW_TYPE} / <!-- ENDIF -->
+							<a href="{PRJ_ROW_CATURL}">{PRJ_ROW_CATTITLE}</a>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="panel-body">
-				<p class="zakaz"><span class="name-user">{PRJ_ROW_OWNER_NAME}</span> | <span class="text-muted date">{PRJ_ROW_DATE_STAMP|cot_date('j F Y', $this)}</span> | <span class="text-muted region">{PRJ_ROW_COUNTRY} {PRJ_ROW_REGION} {PRJ_ROW_CITY}</span>{PRJ_ROW_EDIT_URL}</p>
-				<p class="text project-text">{PRJ_ROW_SHORTTEXT}</p>
-
-				<!-- IF {PHP.cot_plugins_active.tags} AND {PHP.cot_plugins_active.tagslance} AND {PHP.cfg.plugin.tagslance.projects} -->
-				<p class="small">{PHP.L.Tags}:
-					<!-- BEGIN: PRJ_ROW_TAGS_ROW --><!-- IF {PHP.tag_i} > 0 -->, <!-- ENDIF -->
-					<a href="{PRJ_ROW_TAGS_ROW_URL}" title="{PRJ_ROW_TAGS_ROW_TAG}" rel="nofollow">{PRJ_ROW_TAGS_ROW_TAG}</a><!-- END: PRJ_ROW_TAGS_ROW -->
-					<!-- BEGIN: PRJ_ROW_NO_TAGS -->{PRJ_ROW_NO_TAGS}<!-- END: PRJ_ROW_NO_TAGS -->
-				</p>
-				<!-- ENDIF -->
-
-				<div class="pull-right offers"><a class="text-warning" href="{PRJ_ROW_OFFERS_ADDOFFER_URL}">{PHP.L.offers_add_offer}</a> ({PRJ_ROW_OFFERS_COUNT})</div>
-				<div class="type"><!-- IF {PHP.cot_plugins_active.paypro} AND {PRJ_ROW_FORPRO} -->
-					<span class="label label-danger">{PHP.L.paypro_forpro}</span>
-					 <!-- ENDIF -->
-						<!-- IF {PRJ_ROW_TYPE} -->{PRJ_ROW_TYPE} / <!-- ENDIF -->
-					<a href="{PRJ_ROW_CATURL}">{PRJ_ROW_CATTITLE}</a>
-				</div>
-			</div>
-		</div>
 		<!-- END: PRJ_ROWS -->
+
 <div class="pagination"><ul>{PAGENAV_PAGES}</ul></div>
 <!-- END: PROJECTS -->
