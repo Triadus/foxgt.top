@@ -1,10 +1,10 @@
 <!-- BEGIN: MAIN -->
 
-	<div class="register">
+	<div class="register-wrapp">
 		<div class="container">
 			<h3 class="text-lg-center">{USERS_REGISTER_TITLE}</h3>
-			<div class="row m-t-1">
-				<div class="col-md-6 col-md-offset-3">
+			<div class="row justify-content-center">
+				<div class="col-lg-8">
 					<div class="card card-block">
 						{FILE "{PHP.cfg.themes_dir}/{PHP.usr.theme}/warnings.tpl"}
 						<form id="form_register" name="form_register" action="{USERS_REGISTER_SEND}" class="form-horizontal" method="post">
@@ -65,12 +65,12 @@
 								<div class="col-md-8">{USERS_REGISTER_VERIFYINPUT}</div>
 							</div>
 							<!-- IF {PHP.cot_plugins_active.useragreement} -->
-							<div class="form-group text-xs-center">
+							<div class="form-group text-right">
 								{PHP|cot_checkbox(0, 'ruseragreement', '')} <a href="{PHP|cot_url('plug', 'e=useragreement')}" target="blank">{PHP.L.useragreement_agree}</a>
 							</div>
 							<!-- ENDIF -->
-							<div class="form-group row">
-								<div class="text-xs-center"><button type="submit" name="submit" class="btn btn-warning btn-md">{PHP.L.Register}</button></div>
+							<div class="form-group text-center">
+								<button type="submit" name="submit" class="btn btn-warning">{PHP.L.Register}</button>
 							</div>
 						</form>
 					</div>

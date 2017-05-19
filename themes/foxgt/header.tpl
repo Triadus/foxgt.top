@@ -10,10 +10,10 @@
 <link rel="canonical" href="{HEADER_CANONICAL_URL}" />
 {HEADER_BASEHREF}
 {HEADER_HEAD}
-<link rel="shortcut icon" href="favicon.ico" />
+<link rel="shortcut icon" href="favicon.png" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700|Exo+2|Roboto+Slab:400,700" rel="stylesheet" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
 </head>
 
@@ -50,12 +50,12 @@
 								</div>
 							</div>
 
-							<div class="form-group">
-									<div class="form-check text-right">
-										<label class="form-check-label">
-											{HEADER_GUEST_COOKIETTL} {PHP.L.users_rememberme}
-										</label>
-									</div>
+							<div class="form-group text-right">
+								<label class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input">
+									<span class="custom-control-indicator"></span>
+									<span class="custom-control-description">{PHP.L.users_rememberme}</span>
+								</label>
 							</div>
 
 								<div class="form-group">
@@ -89,138 +89,94 @@
 							<!-- END: I18N_LANG_ROW -->
 							<!-- END: I18N_LANG -->
 					</div>
-
-					<div class="col-lg-1 col-md-4 col-sm-4 hidden-xs translit text-right">
-
-					</div>
 			</div>
 		</div>
 	</div>
 
-
-
-	<nav class="navbar-inverse bg-inverse navbar-toggleable-md">
-		<div class="container-fluid">
-
-			<!-- BEGIN: USER -->
-
-			<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-			  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			    <span class="navbar-toggler-icon"></span>
-			  </button>
-			  <a class="navbar-brand" href="#">Navbar</a>
-
-			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-			    <ul class="navbar-nav mr-auto">
-			      <li class="nav-item active">
-			        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link" href="#">Link</a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link disabled" href="#">Disabled</a>
-			      </li>
-			    </ul>
-			    <form class="form-inline my-2 my-lg-0">
-			      <input class="form-control mr-sm-2" type="text" placeholder="Search">
-			      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-			    </form>
-			  </div>
-			</nav>
-
-
-			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<!-- BEGIN: USER -->
+	<div class="container-flex">
+		<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<a class="navbar-brand" href="{PHP.usr.name|cot_url('users', 'm=details&u='$this)}">{PHP.usr.name}</a>
 
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav">
-
-
+			<div class="collapse navbar-collapse" id="nav-content">
+				<ul class="navbar-nav mr-auto">
 					<!-- IF {PHP.cot_modules.payments} AND {PHP.cfg.payments.balance_enabled} -->
-					<li><a href="{HEADER_USER_BALANCE_URL}">{PHP.L.payments_mybalance}: {HEADER_USER_BALANCE|number_format($this, '2', '.', ' ')} {PHP.cfg.payments.valuta}</a></li>
+					<li class="nav-item">
+						<a class="nav-link" href="{HEADER_USER_BALANCE_URL}">{PHP.L.payments_mybalance}: {HEADER_USER_BALANCE|number_format($this, '2', '.', ' ')} {PHP.cfg.payments.valuta}</a>
+					</li>
 					<!-- ENDIF -->
-
 					<!-- IF {PHP.cot_modules.projects} -->
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{PHP.L.projects_projects} <span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-
-							<li><a href="{PHP.usr.id|cot_url('users', 'm=details&id='$this'&tab=projects')}">{PHP.L.projects_myprojects}</a></li>
-
-							<!-- IF {PHP.cot_plugins_active.sbr} -->
-							<li><a href="{PHP|cot_url('sbr')}">{PHP.L.sbr_mydeals}</a></li>
-							<!-- ENDIF -->
-
-							<!-- IF {PHP|cot_auth('projects', 'any', '1')} -->
-							<li><a href="{PHP|cot_url('projects', 'm=useroffers')}">{PHP.L.offers_useroffers}</a></li>
-							<!-- ENDIF -->
-
-						</ul>
+					<li class="nav-item dropdown">
+						<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" id="Preview" role="button" aria-expanded="false">{PHP.L.projects_projects}</a>
+							<div class="dropdown-menu" aria-labelledby="Preview">
+								<a class="dropdown-item" href="{PHP.usr.id|cot_url('users', 'm=details&id='$this'&tab=projects')}">{PHP.L.projects_myprojects}</a>
+								<!-- IF {PHP.cot_plugins_active.sbr} -->
+								<a class="dropdown-item" href="{PHP|cot_url('sbr')}">{PHP.L.sbr_mydeals}</a>
+								<!-- ENDIF -->
+								<!-- IF {PHP|cot_auth('projects', 'any', '1')} -->
+								<a class="dropdown-item" href="{PHP|cot_url('projects', 'm=useroffers')}">{PHP.L.offers_useroffers}</a>
+								<!-- ENDIF -->
+							</div>
 					</li>
 					<!-- ENDIF -->
-
 					<!-- IF {PHP.cot_modules.market} -->
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{PHP.L.market} <span class="caret"></span></a>
-						<ul class="dropdown-menu">
-
-							<li><a href="{PHP.usr.id|cot_url('users', 'm=details&id='$this'&tab=market')}">{PHP.L.market_myproducts}</a></li>
-
-							<!-- IF {PHP.cot_plugins_active.marketorders} -->
-							<li><a href="{PHP|cot_url('marketorders', 'm=sales')}">{PHP.L.marketorders_mysales}</a></li>
-							<li><a href="{PHP|cot_url('marketorders', 'm=purchases')}">{PHP.L.marketorders_mypurchases}</a></li>
-							<!-- ENDIF -->
-
-						</ul>
+					<li class="nav-item dropdown">
+						<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" id="Preview-2" role="button" aria-expanded="false">{PHP.L.market}</a>
+							<div class="dropdown-menu" aria-labelledby="Preview-2">
+								<a class="dropdown-item" href="{PHP.usr.id|cot_url('users', 'm=details&id='$this'&tab=market')}">{PHP.L.market_myproducts}</a>
+								<!-- IF {PHP.cot_plugins_active.marketorders} -->
+								<a class="dropdown-item" href="{PHP|cot_url('marketorders', 'm=sales')}">{PHP.L.marketorders_mysales}</a>
+								<a class="dropdown-item" href="{PHP|cot_url('marketorders', 'm=purchases')}">{PHP.L.marketorders_mypurchases}</a>
+								<!-- ENDIF -->
+						</div>
 					</li>
 					<!-- ENDIF -->
-
 					<!-- IF {PHP.cot_plugins_active.paypro} -->
-					<li>
+					<li class="nav-item">
 						<!-- IF {HEADER_USER_PROEXPIRE} -->
-						<a href="{PHP|cot_url('plug', 'e=paypro')}" title="{PHP.L.paypro_header_extend}">{PHP.L.paypro_header_expire_short} {HEADER_USER_PROEXPIRE|cot_date('d.m.Y', $this)}</a>
+						<a class="nav-link" href="{PHP|cot_url('plug', 'e=paypro')}" title="{PHP.L.paypro_header_extend}">{PHP.L.paypro_header_expire_short} {HEADER_USER_PROEXPIRE|cot_date('d.m.Y', $this)}</a>
 						<!-- ELSE -->
-						<a href="{PHP|cot_url('plug', 'e=paypro')}" title="{PHP.L.paypro_header_buy}">{PHP.L.paypro_header_buy}</a>
+						<a class="nav-link" href="{PHP|cot_url('plug', 'e=paypro')}" title="{PHP.L.paypro_header_buy}">{PHP.L.paypro_header_buy}</a>
 						<!-- ENDIF -->
 					</li>
 					<!-- ENDIF -->
-
-					<!-- IF {HEADER_USER_PMREMINDER} -->
-					<li>{HEADER_USER_PMREMINDER}</li>
-					<!-- ENDIF -->
-
-					<!-- IF {HEADER_NOTICES} -->
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{PHP.L.header_notice} <span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li>{HEADER_NOTICES}</li>
-						</ul>
-					</li>
-					<!-- ENDIF -->
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li class="logout"><a href="{PHP|cot_url('users', 'm=profile')}">{PHP.L.Profile}</a></li>
-					<li class="logout">
-						{HEADER_USER_ADMINPANEL}
-					</li>
-					<li class="logout">
-						{HEADER_USER_LOGINOUT}
-					</li>
+						<!-- IF {HEADER_USER_PMREMINDER} -->
+						<li class="nav-item nav-link logout">
+							{HEADER_USER_PMREMINDER}
+						</li>
+						<!-- ENDIF -->
+						<!-- IF {HEADER_NOTICES} -->
+						<li class="nav-item dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" id="Preview-3" role="button" aria-expanded="false">{PHP.L.header_notice}</a>
+								<div class="dropdown-menu" aria-labelledby="Preview-3">
+									<a class="dropdown-item" href="{HEADER_NOTICES}"></a>
+								</div>
+						</li>
+						<!-- ENDIF -->
+						<li class="nav-item nav-link logout">
+							<a href="{PHP|cot_url('users', 'm=profile')}">{PHP.L.Profile}</a>
+						</li>
+						<li class="nav-item nav-link logout">
+							{HEADER_USER_ADMINPANEL}
+						</li>
+						<li class="nav-item nav-link logout">
+							{HEADER_USER_LOGINOUT}
+						</li>
 				</ul>
 			</div>
-			<!-- END: USER -->
-		</div>
-	</nav>
+		</nav>
+	</div>
+<!-- END: USER -->
 
 
 	<header>
 		<div class="container">
 			<div class="row">
 
-				<div class="col-lg-2">
+				<div class="col-lg-2 hidden-md-down">
 					<div class="logo"><a href="{PHP|cot_url('index')}" title="{PHP.cfg.maintitle} {PHP.cfg.separator} {PHP.cfg.subtitle}"><img src="themes/{PHP.theme}/img/logo.png"/></a></div>
 				</div>
 

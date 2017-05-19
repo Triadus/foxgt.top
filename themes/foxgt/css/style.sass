@@ -118,6 +118,9 @@ textarea
 		a
 			font-size: 12px
 
+.panel-wrapp
+
+
 /* 2. Structure
 	*--------------------------------------------------
 
@@ -138,21 +141,42 @@ header
 
 
 	.register
-		padding-top: 10px
-
+		padding-top: 8px
 		.nav > li > a:focus, .nav > li > a:hover
 			background-color: #337ab7
 			color: #fff
 			text-decoration: none
-
 		li
 			padding: 5px 5px
 		.btn-warning
 			padding: 8px 14px
 			color: #000
 			font-family: "Roboto Slab", sans-serif
+		.navbar-nav .nav-item+ .nav-item
+			margin-left: 0
+		.form-group
+			a
+				color: #000
+				&:hover
+					text-decoration: none
 
-
+.register-wrapp
+	padding: 40px
+	font-family: "Roboto Slab", sans-serif
+	h3
+		padding-bottom: 20px
+	.btn-warning
+		padding: 8px 14px
+		color: #000
+		font-family: "Roboto Slab", sans-serif
+		border-radius: 0
+	.navbar-nav .nav-item+ .nav-item
+		margin-left: 0
+	.form-group
+		a
+			color: #000
+			&:hover
+				text-decoration: none
 
 
 			// MAIN
@@ -634,21 +658,7 @@ ol
 		color: #000
 
 
-.register
-	font-family: "Roboto Slab", sans-serif
-	.navbar-nav .nav-item+ .nav-item
-		margin-left: 0
-	.form-group
-		a
-			color: #000
-			&:hover
-				text-decoration: none
-	h3
-		padding: 20px 0
-	.btn-warning
-		padding: 8px 14px
-		color: #000
-		font-family: "Roboto Slab", sans-serif
+
 
 
 /* Mavatars

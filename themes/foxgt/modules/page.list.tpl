@@ -25,7 +25,7 @@
 		</div>
 		<div class="card-block">
 			<p class="small date">
-				{LIST_ROW_COMMENTS} {LIST_ROW_DATE} {LIST_ROW_CATPATH}
+				{LIST_ROW_COMMENTS} {LIST_ROW_DATE} {LIST_ROW_CATPATH} 
 			</p>
 			<!-- IF {PHP.usr.isadmin} --><p class="small text">{LIST_ROW_ADMIN} ({LIST_ROW_COUNT})</p><!-- ENDIF -->
 			<p>
