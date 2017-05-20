@@ -54,7 +54,7 @@
 
 <!-- ПРОЕКТЫ -->
 
-		<div class="projects">
+		<div class="projects projects-wrapp">
 			<div class="container">
 				<h2 class="text-center">{PHP.L.projects_lastprojects}</h2>
 					{PROJECTS}
@@ -94,5 +94,4 @@
 		</div>
 		<!-- ENDIF -->
 
-	</div>
 <!-- END: MAIN -->

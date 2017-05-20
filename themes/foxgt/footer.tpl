@@ -1,13 +1,13 @@
 <!-- BEGIN: FOOTER -->
 
+</div>
+
 	<footer>
 
-
-		<div class="container-fluid">
+	<div class="page-footer">
+		<div class="container">
 			<div class="support-footer">
-
 				<div class="row">
-
 					<div class="col-lg-2 col-sm-12">
 						&copy; {PHP.sys.now|cot_date('Y', $this)} {PHP.cfg.maintitle}
 					</div>
@@ -22,18 +22,16 @@
 							</div>
 					</div>
 
-					<div class="col-lg-2 col-sm-12">
-						<div class="floatright">
-							Powered by <a href="#" target="blank">Logo-Z</a>
-						</div>
+					<div class="col-lg-2 col-sm-12 text-right">
+						Powered by <a href="#" target="blank">Logo-Z</a>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 
 	</footer>
-
-
+{FOOTER_RC}
 </body>
 </html>
 <!-- END: FOOTER -->
