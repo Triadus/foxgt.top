@@ -152,7 +152,7 @@
 						<li class="nav-item dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" id="Preview-3" role="button" aria-expanded="false">{PHP.L.header_notice}</a>
 								<div class="dropdown-menu" aria-labelledby="Preview-3">
-									<a class="dropdown-item" href="{HEADER_NOTICES}"></a>
+									<a class="dropdown-item" href="#">{HEADER_NOTICES}</a>
 								</div>
 						</li>
 						<!-- ENDIF -->

@@ -17,96 +17,97 @@
 
 		</div>
 		<div class="col-lg-4 text-right">
-		<!-- ?????? ???????? ?????? -->
-
 		<!-- IF {PHP.usr.auth_write} -->
 			<a class="btn btn-warning" rel="nofollow" href="{SUBMITNEWPROJECT_URL}" title="{PHP.L.projects_add_to_catalog}">{PHP.L.projects_add_to_catalog}</a>
 		<!-- ENDIF -->
 		</div>
 	</div>
 
+	<div class="register-wrapp">
+		<form class="form-inline" action="{SEARCH_ACTION_URL}" method="get">
+			<input type="hidden" name="e" value="projects" />
+			<input type="hidden" name="type" value="{PHP.type}" />
+			<input type="hidden" name="l" value="{PHP.lang}" />
+			<div class="form-group mr-2">
+				<label class="mr-3">
+					{PHP.L.SearchName}:
+				</label>
+				<div class="mr-3">
+					{SEARCH_SQ}
+				</div>
+			</div>
+
+			<div class="form-group mr-2">
+				<label class="mr-3">
+					{PHP.L.Category}:
+				</label>
+				<div class="mr-3">
+					{SEARCH_CAT}
+				</div>
+			</div>
+
+			<div class="form-group mr-2">
+				<label class="mr-3">
+					{PHP.L.Order}:
+				</label>
+				<div class="mr-3">
+					{SEARCH_SORTER}
+				</div>
+			</div>
+
+			<div class="form-group">
+				<button type="submit" class="btn btn-warning">{PHP.L.Search}</button>
+			</div>
+
+		</form>
+	</div>
+
 	<div class="row">
-		<div class="col-lg-8">
+		<div class="col-lg-9">
 			<!-- IF {CATALOG} -->
-			<div class="projects-tree">{CATALOG}</div>
+			<div>{CATALOG}</div>
 			<!-- ENDIF -->
 		</div>
 
-		<div class="col-lg-4 text-right">
+		<div class="col-lg-3 text-right">
 			<!-- BEGIN: PTYPES -->
-
-			<ul class="nav nav-pills">
-				<!-- BEGIN: PTYPES_ROWS -->
-				<li<!-- IF {PTYPE_ROW_ACT} --> class="nav-item active"<!-- ENDIF -->>
-					<a class="nav-link" href="{PTYPE_ROW_URL}">{PTYPE_ROW_TITLE}</a>
-				</li>
-				<!-- END: PTYPES_ROWS -->
-
-				<!-- IF {PHP.cot_plugins_active.paypro} -->
-				<li<!-- IF {PHP.forpro} --> class="nav-item active"<!-- ENDIF -->>
-					<a class="nav-link" href="{FORPRO_URL}"><span class="label label-important">{PHP.L.paypro_forpro}</span></a>
-				</li>
-				<!-- ENDIF -->
-			</ul>
+				<ul class="nav nav-pills m-b-2">
+					<li class="nav-item"><a class="nav-link<!-- IF {PTYPE_ALL_ACT} AND !{PHP.forpro} --> active<!-- ENDIF -->" href="{PTYPE_ALL_URL}">{PHP.L.All}</a></li>
+					<!-- BEGIN: PTYPES_ROWS -->
+					<li class="nav-item"><a class="nav-link<!-- IF {PTYPE_ROW_ACT} --> active<!-- ENDIF -->" href="{PTYPE_ROW_URL}">{PTYPE_ROW_TITLE}</a></li>
+					<!-- END: PTYPES_ROWS -->
+					<!-- IF {PHP.cot_plugins_active.paypro} -->
+					<li class="nav-item"><a class="nav-link<!-- IF {PHP.forpro} --> active<!-- ENDIF -->" href="{FORPRO_URL}">{PHP.L.paypro_forpro}</a></li>
+					<!-- ENDIF -->
+				</ul>
 			<!-- END: PTYPES -->
+		</div>
+	<!-- IF {PHP.cot_plugins_active.paypro} -->
+		<!-- IF !{PHP|cot_getuserpro()} AND {PHP.cfg.plugin.paypro.projectslimit} > 0 AND {PHP.cfg.plugin.paypro.projectslimit} <= {PHP.usr.id|cot_getcountprjofuser($this)} -->
+		<div class="alert alert-warning">{PHP.L.paypro_warning_projectslimit_empty}</div>
+		<!-- ENDIF -->
+		<!-- IF !{PHP|cot_getuserpro()} AND {PHP.cfg.plugin.paypro.offerslimit} > 0 AND {PHP.cfg.plugin.paypro.offerslimit} <= {PHP.usr.id|cot_getcountoffersofuser($this)} -->
+		<div class="alert alert-warning">{PHP.L.paypro_warning_offerslimit_empty}</div>
+		<!-- ENDIF -->
+	<!-- ENDIF -->
+	</div>
 
+	<div class="tags-wrapp">
+		<div class="row">
+			<!-- IF {PHP.cot_plugins_active.tags} AND {PHP.cot_plugins_active.tagslance} AND {PHP.cfg.plugin.tagslance.projects} -->
+			<div class="col-lg-1">
+				{PHP.L.Tags}:
+			</div>
+			<div class="col-lg-10">
+				{PRJ_TAG_CLOUD}
+			</div>
+			<!-- ENDIF -->
 		</div>
 	</div>
 
-	<form class="form-inline bg-faded" action="{SEARCH_ACTION_URL}" method="get">
-		<input type="hidden" name="e" value="projects" />
-		<input type="hidden" name="type" value="{PHP.type}" />
-		<input type="hidden" name="l" value="{PHP.lang}" />
-		<div class="form-group mr-2">
-			<label class="mr-3">
-				{PHP.L.SearchName}:
-			</label>
-			<div class="mr-3">
-				{SEARCH_SQ}
-			</div>
-		</div>
-
-		<div class="form-group mr-2">
-			<label class="mr-3">
-				{PHP.L.Category}:
-			</label>
-			<div class="mr-3">
-				{SEARCH_CAT}
-			</div>
-		</div>
-
-		<div class="form-group mr-2">
-			<label class="mr-3">
-				{PHP.L.Order}:
-			</label>
-			<div class="mr-3">
-				{SEARCH_SORTER}
-			</div>
-		</div>
-
-		<div class="form-group">
-			<button type="submit" class="btn btn-warning">{PHP.L.Search}</button>
-		</div>
-
-	</form>
 
 
 
-<!-- IF {PHP.cot_plugins_active.tags} AND {PHP.cot_plugins_active.tagslance} AND {PHP.cfg.plugin.tagslance.projects} -->
-<li class="nav-item">
-	{PHP.L.Tags}
-	{PRJ_TAG_CLOUD}
-</li>
-<!-- ENDIF -->
-
-			<!-- IF {PHP.cot_plugins_active.paypro} -->
-				<!-- IF !{PHP|cot_getuserpro()} AND {PHP.cfg.plugin.paypro.projectslimit} > 0 AND {PHP.cfg.plugin.paypro.projectslimit} <= {PHP.usr.id|cot_getcountprjofuser($this)} -->
-				<div class="alert alert-warning">{PHP.L.paypro_warning_projectslimit_empty}</div>
-				<!-- ENDIF -->
-				<!-- IF !{PHP|cot_getuserpro()} AND {PHP.cfg.plugin.paypro.offerslimit} > 0 AND {PHP.cfg.plugin.paypro.offerslimit} <= {PHP.usr.id|cot_getcountoffersofuser($this)} -->
-				<div class="alert alert-warning">{PHP.L.paypro_warning_offerslimit_empty}</div>
-				<!-- ENDIF -->
-			<!-- ENDIF -->
 
 <!-- BEGIN: PRJ_ROWS -->
 		<div class="card projects<!-- IF {PRJ_ROW_ISBOLD} --> <!-- ENDIF --><!-- IF {PRJ_ROW_ISTOP} --> <!-- ENDIF -->">

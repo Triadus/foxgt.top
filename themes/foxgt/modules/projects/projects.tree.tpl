@@ -6,6 +6,8 @@
 	<li class="nav-item">
 		<a class="nav-link active" href="{HREF}">{PHP.L.All}</a>
 	</li>
+
+	</li>
 	<!-- ENDIF -->
 
 	<!-- BEGIN: CATS -->

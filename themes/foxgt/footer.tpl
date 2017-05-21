@@ -1,6 +1,6 @@
 <!-- BEGIN: FOOTER -->
 
-</div>
+	</div>
 
 	<footer>
 
@@ -32,6 +32,7 @@
 
 	</footer>
 {FOOTER_RC}
+<!-- {FOOTER_HOOKS} -->
 </body>
 </html>
 <!-- END: FOOTER -->
