@@ -23,7 +23,7 @@ $sq = $db->prep($sq);
 
 $maxrowsperpage = ($cfg['projects']['cat_' . $c]['maxrowsperpage']) ? $cfg['projects']['cat_' . $c]['maxrowsperpage'] : $cfg['projects']['cat___default']['maxrowsperpage'];
 list($pn, $d, $d_url) = cot_import_pagenav('d', $maxrowsperpage);
-	
+
 /* === Hook === */
 foreach (cot_getextplugins('projects.list.first') as $pl)
 {
@@ -80,7 +80,7 @@ foreach ($cot_extrafields[$db_projects] as $exfld)
 {
 	$fld_value = cot_import($exfld['field_name'], 'G', 'TXT');
 	$fld_value = $db->prep($fld_value);
-	
+
 	if(!empty($fld_value))
 	{
 		$where[$exfld['field_name']] = "item_".$exfld['field_name']." LIKE '%".$fld_value."%'";
@@ -92,11 +92,11 @@ switch($sort)
 	case 'costasc':
 		$order['cost'] = 'item_cost ASC';
 		break;
-	
+
 	case 'costdesc':
 		$order['cost'] = 'item_cost DESC';
 		break;
-	
+
 	default:
 		$order['date'] = 'item_date DESC';
 		break;
@@ -124,7 +124,7 @@ $totalitems = $db->query("SELECT COUNT(*) FROM $db_projects AS p $join_condition
 	LEFT JOIN $db_users AS u ON u.user_id=p.item_userid
 	" . $where . "")->fetchColumn();
 
-$sqllist = $db->query("SELECT p.*, u.* $join_columns 
+$sqllist = $db->query("SELECT p.*, u.* $join_columns
 	FROM $db_projects AS p $join_condition
 	LEFT JOIN $db_users AS u ON u.user_id=p.item_userid
 	" . $where . "
@@ -167,7 +167,7 @@ $t->parse("MAIN.PTYPES");
 
 $t->assign(array(
 	"SEARCH_ACTION_URL" => cot_url('projects', "&type=" . $type, '', true),
-	"SEARCH_SQ" => cot_inputbox('text', 'sq', htmlspecialchars($sq), 'class="schstring"'),
+	"SEARCH_SQ" => cot_inputbox('text', 'sq', htmlspecialchars($sq)),
 	"SEARCH_CAT" => cot_projects_selectcat($c, 'c'),
 	"SEARCH_SORTER" => cot_selectbox($sort, "sort", array('', 'costasc', 'costdesc'), array($L['projects_mostrelevant'], $L['projects_costasc'], $L['projects_costdesc']), false),
 	"PAGENAV_PAGES" => $pagenav['main'],
@@ -183,7 +183,7 @@ foreach($cot_extrafields[$db_projects] as $exfld)
 {
 	$fld_value = cot_import($exfld['field_name'], 'G', 'TXT');
 	$fld_value = $db->prep($fld_value);
-	
+
 	$fieldname = strtoupper($exfld['field_name']);
 	$exfld_val = cot_build_extrafields($exfld['field_name'], $exfld, $fld_value);
 	$exfld_title = isset($L['projects_'.$exfld['field_name'].'_title']) ?  $L['projects_'.$exfld['field_name'].'_title'] : $exfld['field_description'];

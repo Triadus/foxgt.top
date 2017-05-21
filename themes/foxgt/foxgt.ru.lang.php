@@ -22,3 +22,4 @@ $L['Contact'] = 'Поддержка';
 $L['Authorization'] = 'Авторизация';
 $L['projects_lastprojects'] = 'Последние проекты';
 $L['index_news'] = 'Новости';
+$L['SearchName'] = 'Название';

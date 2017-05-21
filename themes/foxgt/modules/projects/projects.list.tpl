@@ -53,37 +53,42 @@
 		</div>
 	</div>
 
-	<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-		<form action="{SEARCH_ACTION_URL}" method="get">
-			<input type="hidden" name="e" value="projects" />
-			<input type="hidden" name="type" value="{PHP.type}" />
-			<input type="hidden" name="l" value="{PHP.lang}" />
-			<table width="100%" cellpadding="5" cellspacing="0">
-				<tr>
-					<td width="100">{PHP.L.Search}:</td>
-					<td>{SEARCH_SQ}</td>
-				</tr>
-				<!-- IF {PHP.cot_plugins_active.locationselector} -->
-				<tr>
-					<td >{PHP.L.Location}:</td>
-					<td>{SEARCH_LOCATION}</td>
-				</tr>
-				<!-- ENDIF -->
-				<tr>
-					<td >{PHP.L.Category}:</td>
-					<td>{SEARCH_CAT}</td>
-				</tr>
-				<tr>
-					<td>{PHP.L.Order}:</td>
-					<td>{SEARCH_SORTER}</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td><input type="submit" name="search" class="btn" value="{PHP.L.Search}" /></td>
-				</tr>
-			</table>
-		</form>
-	</nav>
+	<form class="form-inline bg-faded" action="{SEARCH_ACTION_URL}" method="get">
+		<input type="hidden" name="e" value="projects" />
+		<input type="hidden" name="type" value="{PHP.type}" />
+		<input type="hidden" name="l" value="{PHP.lang}" />
+		<div class="form-group mr-2">
+			<label class="mr-3">
+				{PHP.L.SearchName}:
+			</label>
+			<div class="mr-3">
+				{SEARCH_SQ}
+			</div>
+		</div>
+
+		<div class="form-group mr-2">
+			<label class="mr-3">
+				{PHP.L.Category}:
+			</label>
+			<div class="mr-3">
+				{SEARCH_CAT}
+			</div>
+		</div>
+
+		<div class="form-group mr-2">
+			<label class="mr-3">
+				{PHP.L.Order}:
+			</label>
+			<div class="mr-3">
+				{SEARCH_SORTER}
+			</div>
+		</div>
+
+		<div class="form-group">
+			<button type="submit" class="btn btn-warning">{PHP.L.Search}</button>
+		</div>
+
+	</form>
 
 
 

@@ -1,4 +1,4 @@
-card<!-- BEGIN: SEARCH -->
+<!-- BEGIN: SEARCH -->
 	<!-- BEGIN: PTYPES -->
 	<div class="nav nav-tabs">
 		<li class="active"><a href="{PTYPE_ALL_URL}">{PHP.L.All}</a></li>

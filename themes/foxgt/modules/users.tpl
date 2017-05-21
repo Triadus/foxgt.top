@@ -12,7 +12,7 @@
 			<div class="well well-small">{USERCATEGORIES_CATALOG}</div>
 		</div>
 		<div class="span9">
-		
+
 			<div class="well">
 				<form action="{SEARCH_ACTION_URL}" method="get">
 					<input type="hidden" name="f" value="search" />
@@ -22,8 +22,8 @@
 					<input type="hidden" name="l" value="{PHP.lang}" />
 					<table width="100%" cellpadding="5" cellspacing="0">
 						<tr>
-							<td width="100">{PHP.L.Search}:</td>
-							<td><input type="text" name="sq" value="{PHP.sq|htmlspecialchars($this)}" class="schstring"/></td>
+							<td>{PHP.L.Search}:</td>
+							<td><input type="text" name="sq" value="{PHP.sq|htmlspecialchars($this)}"/></td>
 						</tr>
 						<!-- IF {PHP.cot_plugins_active.locationselector} -->
 						<tr>
@@ -39,10 +39,10 @@
 							<td></td>
 							<td><input type="submit" name="search" class="btn" value="{PHP.L.Search}" /></td>
 						</tr>
-					</table>	
+					</table>
 				</form>
 			</div>
-			
+
 			<!-- BEGIN: USERS_ROW -->
 				<div class="row">
 					<div class="span1">
@@ -66,6 +66,6 @@
 			<!-- ENDIF -->
 		</div>
 	</div>
-		
+
 
 <!-- END: MAIN -->
