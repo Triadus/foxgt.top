@@ -4,7 +4,7 @@
 
 <div class="c-user">
 	<div class="container">
-		<div class="row justify-content-center">
+		<div class="row">
 
 			<div class="col-md-2 col-sm-4 col-xs-6">
 				<!-- IF {INDEX_COUNT_USR_ALL} -->
@@ -76,6 +76,17 @@
 
 <!-- Товаров -->
 
+			<div class="col-md-2 col-sm-4 col-xs-6">
+				<!-- IF {INDEX_COUNT_PRD_0} -->
+				<i class="fa fa-shopping-basket" aria-hidden="true"></i>
+				<div class="numeral">
+					{INDEX_COUNT_PRD_0}
+				</div>
+				<div class="c-user-text">
+					{PHP.L.fr_market_title}
+				</div>
+				<!-- ENDIF -->
+			</div>
 
 		</div>
 	</div>

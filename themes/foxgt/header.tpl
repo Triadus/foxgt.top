@@ -77,18 +77,19 @@
 	<div class="support">
 		<div class="container">
 			<div class="row">
-					<div class="col-lg-12 col-md-8 col-sm-8 col-xs-12 phone">
-						Поддержка:
-						<i class="fa fa-phone" aria-hidden="true"></i>
-							+38 048 770 7468 |
-						<i class="fa fa-envelope-o" aria-hidden="true"></i>
-							fox.gt.sales@gmail.com
-							<!-- BEGIN: I18N_LANG -->
-							<!-- BEGIN: I18N_LANG_ROW -->
-							<a href="{I18N_LANG_ROW_URL}" class="{I18N_LANG_ROW_CLASS} translit"><img src="images/flags/{I18N_LANG_ROW_FLAG}.png"/></a>
-							<!-- END: I18N_LANG_ROW -->
-							<!-- END: I18N_LANG -->
-					</div>
+				<div class="col-lg-12 col-md-8 col-sm-8 col-xs-12 phone">
+					<span class="pr-5">{HEADER_WHOSONLINE}</span>
+					Поддержка:
+					<i class="fa fa-phone" aria-hidden="true"></i>
+						+38 048 770 7468 |
+					<i class="fa fa-envelope-o" aria-hidden="true"></i>
+						fox.gt.sales@gmail.com
+						<!-- BEGIN: I18N_LANG -->
+						<!-- BEGIN: I18N_LANG_ROW -->
+						<a href="{I18N_LANG_ROW_URL}" class="{I18N_LANG_ROW_CLASS} translit"><img src="images/flags/{I18N_LANG_ROW_FLAG}.png"/></a>
+						<!-- END: I18N_LANG_ROW -->
+						<!-- END: I18N_LANG -->
+				</div>
 			</div>
 		</div>
 	</div>

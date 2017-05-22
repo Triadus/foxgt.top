@@ -47,7 +47,7 @@
 
 <!-- BEGIN: PROJECTS -->
 		<!-- BEGIN: PRJ_ROWS -->
-				<div class="card <!-- IF {PRJ_ROW_ISBOLD} --> <!-- ENDIF --><!-- IF {PRJ_ROW_ISTOP} --> <!-- ENDIF -->">
+				<div class="card mb-3<!-- IF {PRJ_ROW_ISBOLD} --> <!-- ENDIF --><!-- IF {PRJ_ROW_ISTOP} --> <!-- ENDIF -->">
 					<div class="card-header card-warning">
 						<div class="row">
 							<div class="col-lg-6">
