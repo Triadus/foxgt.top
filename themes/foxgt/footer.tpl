@@ -29,9 +29,9 @@
 			</div>
 		</div>
 	</div>
-
-	</footer>
 {FOOTER_RC}
+	</footer>
+
 <!-- {FOOTER_HOOKS} -->
 </body>
 </html>

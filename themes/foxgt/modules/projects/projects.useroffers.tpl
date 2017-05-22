@@ -11,13 +11,13 @@
 
 <!-- BEGIN: OFFER_ROWS -->
 <div class="row">
-	<div class="span12">		
+	<div class="span12">
 		<div class="media<!-- IF {OFFER_ROW_PROJECT_ISBOLD} --> well prjbold<!-- ENDIF --><!-- IF {OFFER_ROW_PROJECT_ISTOP} --> well prjtop<!-- ENDIF -->">
 			<h4>
 				<!-- IF {OFFER_ROW_PROJECT_COST} > 0 --><div class="pull-right">{OFFER_ROW_PROJECT_COST} {PHP.cfg.payments.valuta}</div><!-- ENDIF -->
 				<a href="{OFFER_ROW_PROJECT_URL}">{OFFER_ROW_PROJECT_SHORTTITLE}</a>
 			</h4>
-			<p class="owner small">{OFFER_ROW_PROJECT_OWNER_NAME} <span class="date">[{OFFER_ROW_PROJECT_DATE}]</span> Â  <span class="region">{OFFER_ROW_PROJECT_COUNTRY} {OFFER_ROW_PROJECT_REGION} {OFFER_ROW_PROJECT_CITY}</span></p>
+			<p class="owner small">{OFFER_ROW_PROJECT_OWNER_NAME} <span class="date">[{OFFER_ROW_PROJECT_DATE}]</span>   <span class="region">{OFFER_ROW_PROJECT_COUNTRY} {OFFER_ROW_PROJECT_REGION} {OFFER_ROW_PROJECT_CITY}</span></p>
 			<p class="text">{OFFER_ROW_PROJECT_SHORTTEXT}</p>
 			<div class="pull-right offers"><a href="{OFFER_ROW_PROJECT_OFFERS_ADDOFFER_URL}">{PHP.L.offers_add_offer}</a> ({OFFER_ROW_PROJECT_OFFERS_COUNT})</div>
 			<div class="type"><!-- IF {OFFER_ROW_PROJECT_TYPE} -->{OFFER_ROW_PROJECT_TYPE} / <!-- ENDIF --><a href="{OFFER_ROW_PROJECT_CATURL}">{OFFER_ROW_PROJECT_CATTITLE}</a></div>
@@ -41,7 +41,7 @@
 					</p>
 					<p class="time">
 						<!-- IF {OFFER_ROW_TIMEMAX} > {OFFER_ROW_TIMEMIN} AND {OFFER_ROW_TIMEMIN} != 0 -->
-						{PHP.L.offers_sroki}: {PHP.L.offers_ot} 
+						{PHP.L.offers_sroki}: {PHP.L.offers_ot}
 						{OFFER_ROW_TIMEMIN} {PHP.L.offers_do} {OFFER_ROW_TIMEMAX} {OFFER_ROW_TIMETYPE}
 						<!-- ENDIF -->
 						<!-- IF {OFFER_ROW_TIMEMAX} == {OFFER_ROW_TIMEMIN} AND {OFFER_ROW_TIMEMIN} != 0 OR {OFFER_ROW_TIMEMAX} == 0 AND {OFFER_ROW_TIMEMIN} != 0 -->
@@ -61,7 +61,7 @@
 					</p>
 				</div>
 			</div>
-		</div>	
+		</div>
 	</div>
 </div>
 <hr/>
@@ -71,5 +71,3 @@
 
 
 <!-- END: MAIN -->
-
-

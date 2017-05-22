@@ -11,10 +11,10 @@
 			<p class="owner">{PRJ_PERFORMER_NAME}</p>
 			<p>
 				<!-- IF {PRJ_PERFORMER_ISPRO} -->
-				<span class="label label-important">PRO</span> 
+				<span class="label label-important">PRO</span>
 				<!-- ENDIF -->
 				<span class="label label-info">{PRJ_PERFORMER_USERPOINTS}</span>
-			</p>		
+			</p>
 		</div>
 	</div>
 </div>
@@ -28,7 +28,7 @@
 <div class="alert alert-warning">{PHP.L.paypro_warning_offerslimit_empty}</div>
 <!-- END: OFFERSLIMITEMPTY -->
 
-<div id="offers">	
+<div id="offers">
 	<h4>{PHP.L.offers_offers} ({ALLOFFERS_COUNT})</h4><br/>
 	<!-- BEGIN: ROWS -->
 	<div class="row">
@@ -36,7 +36,7 @@
 			{OFFER_ROW_OWNER_AVATAR}
 		</div>
 		<div class="span11">
-			
+
 			<!-- BEGIN: CHOISE -->
 			<div class="pull-right">
 				<div class="well span3">
@@ -47,22 +47,22 @@
 					<p align="center">{PHP.L.offers_vibran_ispolnitel}!</p>
 					<!-- ENDIF -->
 					<!-- IF {OFFER_ROW_CHOISE} != "refuse" -->
-					<a href="{OFFER_ROW_REFUSE}" class="btn btn-warning btn-block">{PHP.L.offers_otkazat}</a> 
+					<a href="{OFFER_ROW_REFUSE}" class="btn btn-warning btn-block">{PHP.L.offers_otkazat}</a>
 					<!-- ENDIF -->
 					<!-- IF {OFFER_ROW_CHOISE} != "performer" AND {PERFORMER_USERID} == "" -->
-					<a href="{OFFER_ROW_SETPERFORMER}" class="btn btn-success btn-block">{PHP.L.offers_ispolnitel}</a> 
+					<a href="{OFFER_ROW_SETPERFORMER}" class="btn btn-success btn-block">{PHP.L.offers_ispolnitel}</a>
 					<!-- ENDIF -->
 					<!-- IF {OFFER_ROW_CHOISE} != "refuse" AND {PHP.cot_plugins_active.sbr} -->
-					<a href="{OFFER_ROW_SBRCREATELINK}" class="btn btn-primary btn-block">{PHP.L.sbr_createlink}</a> 
+					<a href="{OFFER_ROW_SBRCREATELINK}" class="btn btn-primary btn-block">{PHP.L.sbr_createlink}</a>
 					<!-- ENDIF -->
 				</div>
 			</div>
 			<!-- END: CHOISE -->
-			
+
 			<p class="owner">{OFFER_ROW_OWNER_NAME} <span class="date">[{OFFER_ROW_DATE}]</span></p>
 			<p>
 				<!-- IF {OFFER_ROW_OWNER_ISPRO} -->
-				<span class="label label-important">PRO</span> 
+				<span class="label label-important">PRO</span>
 				<!-- ENDIF -->
 				<span class="label label-info">{OFFER_ROW_OWNER_USERPOINTS}</span>
 			</p>
@@ -78,7 +78,7 @@
 			</p>
 			<p class="time">
 				<!-- IF {OFFER_ROW_TIMEMAX} > {OFFER_ROW_TIMEMIN} AND {OFFER_ROW_TIMEMIN} != 0 -->
-				{PHP.L.offers_sroki}: {PHP.L.offers_ot} 
+				{PHP.L.offers_sroki}: {PHP.L.offers_ot}
 				{OFFER_ROW_TIMEMIN} {PHP.L.offers_do} {OFFER_ROW_TIMEMAX} {OFFER_ROW_TIMETYPE}
 				<!-- ENDIF -->
 				<!-- IF {OFFER_ROW_TIMEMAX} == {OFFER_ROW_TIMEMIN} AND {OFFER_ROW_TIMEMIN} != 0 OR {OFFER_ROW_TIMEMAX} == 0 AND {OFFER_ROW_TIMEMIN} != 0 -->
@@ -104,7 +104,7 @@
 				<div class="row">
 					<div class="span1">{POST_ROW_OWNER_AVATAR}</div>
 					<div class="span10">
-						<p class="owner">{POST_ROW_OWNER_NAME} <span class="date">[{POST_ROW_DATE}] &nbsp; {POST_ROW_EDIT_URL}</span></p> 
+						<p class="owner">{POST_ROW_OWNER_NAME} <span class="date">[{POST_ROW_DATE}] &nbsp; {POST_ROW_EDIT_URL}</span></p>
 						{POST_ROW_TEXT}
 					</div>
 				</div>
@@ -122,12 +122,12 @@
 			</div>
 
 			<!-- END: POSTS -->
-			
+
 		</div>
 	</div>
 	<!-- END: ROWS -->
 </div>
-					
+
 <!-- IF {OFFERSNAV_COUNT} > 0 -->
 <div class="pagination"><ul>{OFFERSNAV_PAGES}</ul></div>
 <!-- ENDIF -->
@@ -148,7 +148,7 @@
 			</tr>
 			<tr>
 				<td align="right">{PHP.L.offers_sroki}:</td>
-				<td>{PHP.L.offers_ot} {OFFER_FORM_TIMEMIN} 
+				<td>{PHP.L.offers_ot} {OFFER_FORM_TIMEMIN}
 					{PHP.L.offers_do} {OFFER_FORM_TIMEMAX} {OFFER_FORM_TIMETYPE}</td>
 			</tr>
 			<tr>
@@ -165,7 +165,7 @@
 				<td align="left"></td>
 				<td>
 					<div class="pull-right">
-						<input type="submit" name="submit" class="btn btn-success" value="{PHP.L.offers_add_predl}" />
+						<input type="submit" name="submit" class="btn btn-warning" value="{PHP.L.offers_add_predl}" />
 					</div>
 					{OFFER_FORM_HIDDEN}
 				</td>
@@ -182,5 +182,3 @@
 <!-- ENDIF -->
 
 <!-- END: MAIN -->
-
-

@@ -23,7 +23,7 @@
 		</div>
 	</div>
 
-	<div class="register-wrapp">
+	<div class="row justify-content-center register-wrapp">
 		<form class="form-inline" action="{SEARCH_ACTION_URL}" method="get">
 			<input type="hidden" name="e" value="projects" />
 			<input type="hidden" name="type" value="{PHP.type}" />
@@ -105,10 +105,6 @@
 		</div>
 	</div>
 
-
-
-
-
 <!-- BEGIN: PRJ_ROWS -->
 		<div class="card projects<!-- IF {PRJ_ROW_ISBOLD} --> <!-- ENDIF --><!-- IF {PRJ_ROW_ISTOP} --> <!-- ENDIF -->">
 			<div class="card-header card-warning">
@@ -150,11 +146,11 @@
 <!-- END: PRJ_ROWS -->
 
 
-			<!-- IF {PAGENAV_COUNT} > 0 -->
-			<div class="pagination"><ul>{PAGENAV_PAGES}</ul></div>
-			<!-- ELSE -->
-			<div class="alert">{PHP.L.projects_notfound}</div>
-			<!-- ENDIF -->
+	<!-- IF {PAGENAV_COUNT} > 0 -->
+	<div class="pagination"><ul>{PAGENAV_PAGES}</ul></div>
+	<!-- ELSE -->
+	<div class="alert">{PHP.L.projects_notfound}</div>
+	<!-- ENDIF -->
 
 </div>
 <!-- END: MAIN -->
