@@ -78,7 +78,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 col-md-8 col-sm-8 col-xs-12 phone">
-					<span class="pr-5">{HEADER_WHOSONLINE}</span>
+					<span class="mr">{HEADER_WHOSONLINE}</span>
 					Поддержка:
 					<i class="fa fa-phone" aria-hidden="true"></i>
 						+38 048 770 7468 |

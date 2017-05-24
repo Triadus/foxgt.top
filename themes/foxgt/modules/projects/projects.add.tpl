@@ -4,10 +4,11 @@
 
 <div class="container">
 	<div class="breadcrumb">{PHP.L.projects_add_project_title}</div>
-	
-	<h1 class="m-y-2">{PHP.L.projects_add_project_title}</h1>
-	<div class="card">
-		<div class="card-block">
+
+	<h2>{PHP.L.projects_add_project_title}</h2>
+
+	<div class="card mb-5">
+		<div class="card-block publ-proj">
 			{FILE "{PHP.cfg.themes_dir}/{PHP.cfg.defaulttheme}/warnings.tpl"}
 			<form action="{PRJADD_FORM_SEND}" method="post" name="newadv" enctype="multipart/form-data" class="form-horizontal">
 				<!-- IF {PHP.projects_types} -->
@@ -66,11 +67,13 @@
 				<div class="form-group row">
 					<label class="col-md-3 form-control-label">{PHP.L.paypro_forpro}:</label>
 					<div class="col-md-9">
-						{PRJADD_FORM_FORPRO}
+						<span class="badge badge-pill badge-danger pro">
+							{PRJADD_FORM_FORPRO}
+						</span>
 					</div>
 				</div>
 				<!-- ENDIF -->
-				<input type="submit" class="btn btn-success" value="{PHP.L.projects_next}" />
+				<button class="btn btn-warning" type="submit" name="button">{PHP.L.projects_next}</button>
 			</form>
 		</div>
 	</div>
