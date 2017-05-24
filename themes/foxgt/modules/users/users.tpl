@@ -42,19 +42,21 @@
 	<div>{USERCATEGORIES_CATALOG}</div>
 
 	<!-- BEGIN: USERS_ROW -->
-	<div class="card">
-		<div class="card-block">
+	<div class="card mb-3">
+		<div class="card-header card-default">
+					<span class="avtors">{USERS_ROW_NAME}</span>
+					<span class="badge badge-pill badge-warning points ml-1"> {USERS_ROW_USERPOINTS}</span>
+					<!-- IF {USERS_ROW_ISPRO} -->
+					<span class="badge badge-pill badge-danger pro ml-1">PRO</span>
+					<!-- ENDIF -->
+		</div>
+		<div class="card-block avtors-wrapp">
 			<div class="media">
 				<a href="{USERS_ROW_DETAILSLINK}">{USERS_ROW_AVATAR}</a>
-				<span class="label label-info">{USERS_ROW_NAME} {USERS_ROW_USERPOINTS}</span>
 			</div>
 			<div class="media-body">
-				<div class="text-right">
-
-				</div>
-				<div class="media-heading"><a href="{USERS_ROW_DETAILSLINK}">{USERS_ROW_FULL_NAME}</a></div>
+				<a href="{USERS_ROW_DETAILSLINK}">{USERS_ROW_FULL_NAME}</a>
 				<p class="text-muted">{USERS_ROW_COUNTRY} {USERS_ROW_REGION} {USERS_ROW_CITY}</p>
-				<!-- IF {USERS_ROW_ISPRO} --><span class="label label-success">PRO</span><!-- ENDIF -->
 			</div>
 		</div>
 	</div>
