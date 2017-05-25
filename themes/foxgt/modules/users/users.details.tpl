@@ -39,38 +39,37 @@
 				<ul class="nav nav-tabs" id="clothing-nav" role="tablist">
 
 					<li class="nav-item"<!-- IF !{PHP.tab} --> class="active"<!-- ENDIF -->>
-						<a class="nav-link" href="{USERS_DETAILS_DETAILSLINK}#info" id="info-tab" role="tab" data-toggle="tab" aria-controls="info" aria-expanded="true">{PHP.L.Main}</a>
+						<a class="nav-link active" href="#info" id="info-tab" role="tab" data-toggle="tab" aria-controls="info" aria-expanded="true">{PHP.L.Main}</a>
 					</li>
 
 					<!-- IF {PHP.cot_modules.folio} -->
-
 					<li class="nav-item"<!-- IF {PHP.tab} == 'portfolio' --> class="active"<!-- ENDIF -->>
-						<a class="nav-link" href="{USERS_DETAILS_FOLIO_URL}#portfolio" id="portfolio-tab" role="tab" data-toggle="tab" aria-controls="portfolio" aria-expanded="true">{PHP.L.folio} {USERS_DETAILS_FOLIO_COUNT}</a>
+						<a class="nav-link" href="#portfolio" id="portfolio-tab" role="tab" data-toggle="tab" aria-controls="portfolio" aria-expanded="true">{PHP.L.folio} {USERS_DETAILS_FOLIO_COUNT}</a>
 					</li>
 					<!-- ENDIF -->
 
 					<!-- IF {PHP.cot_modules.market} -->
 					<li class="nav-item"<!-- IF {PHP.tab} == 'market' --> class="active"<!-- ENDIF -->>
-						<a class="nav-link" href="{USERS_DETAILS_MARKET_URL}#market" id="market-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">{PHP.L.market} {USERS_DETAILS_MARKET_COUNT}</a>
+						<a class="nav-link" href="#market" id="market-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">{PHP.L.market} {USERS_DETAILS_MARKET_COUNT}</a>
 					</li>
 					<!-- ENDIF -->
 
 					<!-- IF {PHP.cot_modules.projects} -->
 					<li class="nav-item"<!-- IF {PHP.tab} == 'projects' --> class="active"<!-- ENDIF -->>
-						<a class="nav-link" href="{USERS_DETAILS_PROJECTS_URL}#projects" id="projects-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">{PHP.L.projects_projects} {USERS_DETAILS_PROJECTS_COUNT}</a>
+						<a class="nav-link" href="#projects" id="projects-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">{PHP.L.projects_projects} {USERS_DETAILS_PROJECTS_COUNT}</a>
 					</li>
 					<!-- ENDIF -->
 
 					<!-- IF {PHP.cot_plugins_active.reviews} -->
 					<li class="nav-item"<!-- IF {PHP.tab} == 'reviews' --> class="active"<!-- ENDIF -->>
-						<a class="nav-link" href="{USERS_DETAILS_REVIEWS_URL}#reviews" id="reviews-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">{PHP.L.reviews_reviews} {USERS_DETAILS_REVIEWS_COUNT}</a>
+						<a class="nav-link" href="#reviews" id="reviews-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">{PHP.L.reviews_reviews} {USERS_DETAILS_REVIEWS_COUNT}</a>
 					</li>
 					<!-- ENDIF -->
 				</ul>
 
 
 			<div id="clothing-nav-content" class="tab-content">
-				<div role="tabpanel" class="tab-pane fade show<!-- IF !{PHP.tab} --> active<!-- ENDIF -->" id="info" aria-labelledby="info-tab">
+				<div role="tabpanel" class="tab-pane fade show active<!-- IF !{PHP.tab} --> active<!-- ENDIF -->" id="info" aria-labelledby="info-tab">
 					<table class="table">
 		<!-- IF {PHP.cot_modules.pm} -->
 						<tr>
@@ -109,16 +108,16 @@
 					</table>
 				</div>
 
-				<div role="tabpanel" class="tab-pane fade<!-- IF {PHP.tab} == 'portfolio' --> active<!-- ENDIF -->" id="portfolio">
+				<div role="tabpanel" class="tab-pane fade<!-- IF {PHP.tab} == 'portfolio' --> active<!-- ENDIF -->" id="portfolio" aria-labelledby="portfolio-tab">
 					{PORTFOLIO}
 				</div>
-				<div class="tab-pane<!-- IF {PHP.tab} == 'market' --> active<!-- ENDIF -->" id="tab_market">
+				<div role="tabpanel" class="tab-pane fade<!-- IF {PHP.tab} == 'market' --> active<!-- ENDIF -->" id="market" aria-labelledby="market-tab">
 					{MARKET}
 				</div>
-				<div class="tab-pane<!-- IF {PHP.tab} == 'projects' --> active<!-- ENDIF -->" id="tab_projects">
+				<div role="tabpanel" class="tab-pane fade<!-- IF {PHP.tab} == 'projects' --> active<!-- ENDIF -->" id="projects" aria-labelledby="projects-tab">
 					{PROJECTS}
 				</div>
-				<div class="tab-pane<!-- IF {PHP.tab} == 'reviews' --> active<!-- ENDIF -->" id="tab_reviews">
+				<div role="tabpanel" class="tab-pane fade<!-- IF {PHP.tab} == 'reviews' --> active<!-- ENDIF -->" id="reviews" aria-labelledby="reviews-tab">
 					{REVIEWS}
 				</div>
 			</div>
