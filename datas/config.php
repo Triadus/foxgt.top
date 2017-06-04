@@ -41,7 +41,7 @@ $cfg['defaultscheme'] = 'default';	// Default color scheme, only name, not like 
 $cfg['defaulticons'] = 'default';	// Default icon pack
 $cfg['defaultlang'] = 'ru';			// Default language code
 $cfg['enablecustomhf'] = FALSE;		// To enable header.$location.tpl and footer.$location.tpl
-$cfg['admintheme'] = 'fusion';			// Put custom administration theme name here
+$cfg['admintheme'] = 'templatespro';			// Put custom administration theme name here
 
 // ========================
 // Performance-related settings

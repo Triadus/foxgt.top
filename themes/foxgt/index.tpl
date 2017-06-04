@@ -71,7 +71,7 @@
 				<h2 class="text-center">
 					{PHP.L.userpoints_topfreelancers}
 				</h2>
-				{PHP|cot_get_topusers (4, 5)}
+				{PHP|cot_get_topusers (4, 4)}
 			</div>
 		</div>
 
@@ -80,11 +80,13 @@
 				<h2 class="text-center">
 					{PHP.L.userpoints_topemployers}
 				</h2>
-				{PHP|cot_get_topusers (7, 5)}
+				{PHP|cot_get_topusers (7, 4)}
 			</div>
 		</div>
 	</div>
 		<!-- ENDIF -->
+
+	{PHP|cot_getmarketlist('index', '4')}
 
 		<!-- IF {INDEX_NEWS} -->
 		<div class="news">
