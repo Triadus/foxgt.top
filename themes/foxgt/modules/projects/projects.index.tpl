@@ -60,13 +60,14 @@
 								<span class="badge badge-pill badge-danger">{PHP.L.paypro_forpro}</span>
 								<!-- ENDIF -->
 								<!-- IF {PRJ_ROW_COST} > 0 -->
-								<span>{PRJ_ROW_COST} {PHP.cfg.payments.valuta}</span>
+								<span>{PRJ_ROW_COST} {PHP.cfg.payments.valuta}</span></br>
 								<!-- ENDIF -->
+								<span class="float-right">{PRJ_ROW_TIMEPROJ_TITLE}: {PRJ_ROW_TIMEPROJ}</span>
 							</div>
 						</div>
 					</div>
 					<div class="card-block">
-						<p class="zakaz"><span class="name-user">{PRJ_ROW_OWNER_NAME}</span> | <span class="text-muted date">{PRJ_ROW_DATE_STAMP|cot_date('j F Y', $this)}</span> | <span class="text-muted region">{PRJ_ROW_COUNTRY} {PRJ_ROW_REGION} {PRJ_ROW_CITY}</span>{PRJ_ROW_EDIT_URL}</p>
+						<p class="zakaz"><span class="name-user">{PRJ_ROW_OWNER_NAME}</span> | <span class="text-muted date">{PRJ_ROW_DATE_STAMP|cot_date('j F Y', $this)}</span> | </span>{PRJ_ROW_EDIT_URL}</p>
 						<p class="text project-text">{PRJ_ROW_SHORTTEXT}</p>
 
 						<!-- IF {PHP.cot_plugins_active.tags} AND {PHP.cot_plugins_active.tagslance} AND {PHP.cfg.plugin.tagslance.projects} -->
@@ -77,7 +78,7 @@
 						</p>
 						<!-- ENDIF -->
 
-						<div class="pull-right offers"><a class="btn btn-secondary" href="{PRJ_ROW_OFFERS_ADDOFFER_URL}">{PHP.L.offers_add_offer} ({PRJ_ROW_OFFERS_COUNT})</a></div>
+						<div <!-- IF {PHP.usr.auth_write} -->class="hidden"<!-- ENDIF -->class="pull-right offers"><a class="btn btn-secondary btn-warning" href="{PRJ_ROW_OFFERS_ADDOFFER_URL}">{PHP.L.offers_add_offer} ({PRJ_ROW_OFFERS_COUNT})</a></div>
 						<div class="type">
 							<!-- IF {PRJ_ROW_TYPE} -->{PRJ_ROW_TYPE} / <!-- ENDIF -->
 							<a href="{PRJ_ROW_CATURL}">{PRJ_ROW_CATTITLE}</a>

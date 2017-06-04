@@ -10,16 +10,16 @@
 				</div>
 				<div class="row">
 					<div class="col-lg-3 col-md-6">
-						<p>Копирайтинг</p>
+						<p><a href="projects/kopirayting">Копирайтинг</a></p>
 					</div>
 					<div class="col-lg-3 col-md-6">
-						<p>Рерайтинг</p>
+						<p><a href="projects/rerayting">Рерайтинг</a></p>
 					</div>
 					<div class="col-lg-3 col-md-6">
-						<p>SEO копирайтинг</p>
+						<p><a href="projects/SEOkopirayting">SEO копирайтинг</a></p>
 					</div>
 					<div class="col-lg-3 col-md-6">
-						<p>Перевод</p>
+						<p><a href="projects/perevod">Перевод</a></p>
 					</div>
 				</div>
 			</div>
@@ -85,8 +85,6 @@
 		</div>
 	</div>
 		<!-- ENDIF -->
-
-	{PHP|cot_getmarketlist('index', '4')}
 
 		<!-- IF {INDEX_NEWS} -->
 		<div class="news">

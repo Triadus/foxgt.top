@@ -15,21 +15,21 @@
 			<tr>
 				<td width="150">{PHP.L.Category}:</td>
 				<td>{PRJEDIT_FORM_CAT}</td>
-			</tr>		
-			<tr>
+			</tr>
+			<!-- <tr>
 				<td>{PHP.L.Location}:</td>
 				<td>{PRJEDIT_FORM_LOCATION}</td>
-			</tr>
+			</tr> -->
 			<tr>
 				<td>{PHP.L.Title}:</td>
 				<td>{PRJEDIT_FORM_TITLE}</td>
 			</tr>
 			<tr>
-				<td>{PHP.L.Alias}:</td>
-				<td>{PRJEDIT_FORM_ALIAS}</td>
+				<td>{PRJEDIT_FORM_TIMEPROJ_TITLE}:</td>
+				<td>{PRJEDIT_FORM_TIMEPROJ}</td>
 			</tr>
 			<tr<!-- IF !{PHP.usr.isadmin} --> class="hidden"<!-- ENDIF -->>
-				<td align="right">{PHP.L.Parser}:</td>
+				<td>{PHP.L.Parser}:</td>
 				<td>{PRJEDIT_FORM_PARSER}</td>
 			</tr>
 			<tr>

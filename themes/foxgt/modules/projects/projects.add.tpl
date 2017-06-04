@@ -21,17 +21,17 @@
 					<label class="col-md-3 form-control-label">{PHP.L.Category}:</label>
 					<div class="col-md-9">{PRJADD_FORM_CAT}</div>
 				</div>
-				<div class="form-group row">
+				<!-- <div class="form-group row">
 					<label class="col-md-3 form-control-label">{PHP.L.Location}:</label>
 					<div class="col-md-9">{PRJADD_FORM_LOCATION}</div>
-				</div>
+				</div> -->
 				<div class="form-group row">
 					<label class="col-md-3 form-control-label">{PHP.L.Title}:</label>
 					<div class="col-md-9">{PRJADD_FORM_TITLE}</div>
 				</div>
 				<div class="form-group row">
-					<label class="col-md-3 form-control-label">{PHP.L.Alias}:</label>
-					<div class="col-md-9">{PRJADD_FORM_ALIAS}</div>
+					<label class="col-md-3 form-control-label">{PRJADD_FORM_TIMEPROJ_TITLE}:</label>
+					<div class="col-md-9">{PRJADD_FORM_TIMEPROJ}</div>
 				</div>
 				<div class="form-group row<!-- IF !{PHP.usr.isadmin} --> sr-only<!-- ENDIF -->">
 					<label class="col-md-3 form-control-label">{PHP.L.Parser}:</label>

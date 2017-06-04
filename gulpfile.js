@@ -42,8 +42,8 @@ gulp.task('watch', ['sass', 'browser-sync'], function() {
 // Выгрузка изменений на хостинг
 gulp.task('deploy', function() {
 	var conn = ftp.create({
-		host:      '77.222.62.66',
-		user:      'logozet_triadus',
+		host:      'ftp.s42.freehost.com.ua',
+		user:      'foxgt_logoz',
 		password:  'max14789632',
 		parallel:  10,
 		log: gutil.log
@@ -52,7 +52,7 @@ gulp.task('deploy', function() {
 	'themes/**',
 	];
 	return gulp.src(globs, {buffer: false})
-	.pipe(conn.dest('/foxgt/public_html/themes/'));
+	.pipe(conn.dest('/www.fox-gt.com/themes/'));
 });
 
 gulp.task('default', ['watch']);

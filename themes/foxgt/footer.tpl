@@ -30,6 +30,7 @@
 		</div>
 	</div>
 {FOOTER_RC}
+{CHATWEE}
 	</footer>
 
 <!-- {FOOTER_HOOKS} -->

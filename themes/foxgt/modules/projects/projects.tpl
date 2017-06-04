@@ -19,8 +19,9 @@
 					<span class="badge badge-pill badge-danger">{PHP.L.paypro_forpro}</span>
 					<!-- ENDIF -->
 					<!-- IF {PRJ_COST} > 0 -->
-					<span>{PRJ_COST} {PHP.cfg.payments.valuta}</span>
+					<span>{PRJ_COST} {PHP.cfg.payments.valuta}</span><br>
 					<!-- ENDIF -->
+					<span class="float-right">{PRJ_TIMEPROJ_TITLE}: {PRJ_TIMEPROJ}</span>
 				</div>
 			</div>
 		</div>
