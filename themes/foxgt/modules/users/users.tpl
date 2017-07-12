@@ -49,6 +49,7 @@
 					<!-- IF {USERS_ROW_ISPRO} -->
 					<span class="badge badge-pill badge-danger pro ml-1">PRO</span>
 					<!-- ENDIF -->
+					{USERS_ROW_RATINGS_DISPLAY}
 		</div>
 		<div class="card-block avtors-wrapp">
 			<div class="media">

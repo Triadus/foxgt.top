@@ -45,11 +45,11 @@ gulp.task('deploy', function() {
 		host:      'ftp.s42.freehost.com.ua',
 		user:      'foxgt_logoz',
 		password:  'max14789632',
-		parallel:  10,
+		parallel:  5,
 		log: gutil.log
 	});
 	var globs = [
-	'themes/**',
+	'themes/foxgt/css/**',
 	];
 	return gulp.src(globs, {buffer: false})
 	.pipe(conn.dest('/www.fox-gt.com/themes/'));
