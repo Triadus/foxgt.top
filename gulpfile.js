@@ -49,7 +49,7 @@ gulp.task('deploy', function() {
 		log: gutil.log
 	});
 	var globs = [
-	'themes/foxgt/css/**',
+	'themes/**',
 	];
 	return gulp.src(globs, {buffer: false})
 	.pipe(conn.dest('/www.fox-gt.com/themes/'));
