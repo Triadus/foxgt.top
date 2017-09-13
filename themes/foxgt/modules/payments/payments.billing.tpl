@@ -10,7 +10,7 @@
 			<!-- BEGIN: BILL_ROW -->
 
 				<div class="payments">
-					<div class="col-md-3">
+					<div class="col-md-3 col-sm-4">
 						<a href="{BILL_ROW_URL}"><img src="{BILL_ROW_ICON}"/></a>
 					</div>
 				</div>
