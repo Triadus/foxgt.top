@@ -26,7 +26,7 @@ $extra_whitelist[$db_projects] = array(
 	'code' => 'projects',
 	'tags' => array(
 		'projects.list.tpl' => '{LIST_ROW_XXXXX}, {LIST_TOP_XXXXX}',
-		'projects.tpl, projects.step2.tpl' => '{PRJ_XXXXX}, {PRJ_XXXXX_TITLE}',
+		'projects.tpl, projects.preview.tpl' => '{PRJ_XXXXX}, {PRJ_XXXXX_TITLE}',
 		'projects.add.tpl' => '{PRJADD_FORM_XXXXX}, {PRJADD_FORM_XXXXX_TITLE}',
 		'projects.edit.tpl' => '{PRJEDIT_FORM_XXXXX}, {PRJEDIT_FORM_XXXXX_TITLE}',
 	)

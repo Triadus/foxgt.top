@@ -41,6 +41,15 @@
 					<label class="col-md-3 form-control-label">{PHP.L.Text}:</label>
 					<div class="col-md-9">{PRJADD_FORM_TEXT}</div>
 				</div>
+				<div class="form-group row">
+					<label class="col-md-3 form-control-label">{PRJADD_FORM_TRANSLATELANG_1_TITLE}</label>
+					<div class="col-md-9">{PRJADD_FORM_TRANSLATELANG_1}</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-md-3 form-control-label">{PRJADD_FORM_TRANSLATELANG_2_TITLE}</label>
+					<div class="col-md-9">{PRJADD_FORM_TRANSLATELANG_2}</div>
+				</div>
+
 
 				<!-- BEGIN: TAGS -->
 				<div class="form-group row">
@@ -67,7 +76,7 @@
 				<div class="form-group row">
 					<label class="col-md-3 form-control-label">{PHP.L.paypro_forpro}:</label>
 					<div class="col-md-9">
-						<span class="badge badge-pill badge-danger pro">
+						<span class="badge badge-danger pro">
 							{PRJADD_FORM_FORPRO}
 						</span>
 					</div>
