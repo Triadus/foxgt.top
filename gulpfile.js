@@ -49,10 +49,10 @@ gulp.task('deploy', function() {
 		log: gutil.log
 	});
 	var globs = [
-	'themes/foxgt/**',
+	'themes/**',
 	];
 	return gulp.src(globs, {buffer: false})
-	.pipe(conn.dest('/www.fox-gt.com/themes/foxgt'));
+	.pipe(conn.dest('/www.fox-gt.com/themes'));
 });
 
 gulp.task('default', ['watch']);
